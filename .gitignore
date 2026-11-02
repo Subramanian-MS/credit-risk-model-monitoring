@@ -1,0 +1,13 @@
+# Large data files
+data/raw/*.csv
+data/raw/*.xlsx
+data/raw/*.zip
+data/processed/*.csv.gz
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.DS_Store

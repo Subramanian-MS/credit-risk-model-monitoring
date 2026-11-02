@@ -1,0 +1,1316 @@
+{
+  "baseline_definition": "Approval FY2000 - FY2004 (249,854 commercial loans)",
+  "oot_definition": "Approval FY2005 - FY2009 (354,932 commercial loans)",
+  "score_bins": [
+    "<480",
+    "480-499",
+    "500-519",
+    "520-534",
+    "535-544",
+    "545-554",
+    "555-564",
+    "565-574",
+    "575-589",
+    "590+"
+  ],
+  "base_distribution": {
+    "<480": 0.0612,
+    "480-499": 0.044,
+    "500-519": 0.054,
+    "520-534": 0.0988,
+    "535-544": 0.1263,
+    "545-554": 0.1574,
+    "555-564": 0.2015,
+    "565-574": 0.1552,
+    "575-589": 0.087,
+    "590+": 0.0147
+  },
+  "psi_by_year": [
+    {
+      "fy": 2000,
+      "n_loans": 37532,
+      "psi": 0.0278,
+      "rag": "GREEN",
+      "is_dev": true,
+      "score_distribution": {
+        "<480": 0.0584,
+        "480-499": 0.0374,
+        "500-519": 0.0577,
+        "520-534": 0.1012,
+        "535-544": 0.1518,
+        "545-554": 0.1812,
+        "555-564": 0.2081,
+        "565-574": 0.1379,
+        "575-589": 0.0591,
+        "590+": 0.0072
+      }
+    },
+    {
+      "fy": 2001,
+      "n_loans": 37264,
+      "psi": 0.0045,
+      "rag": "GREEN",
+      "is_dev": true,
+      "score_distribution": {
+        "<480": 0.0531,
+        "480-499": 0.0405,
+        "500-519": 0.0502,
+        "520-534": 0.0963,
+        "535-544": 0.1358,
+        "545-554": 0.1559,
+        "555-564": 0.1968,
+        "565-574": 0.1559,
+        "575-589": 0.0973,
+        "590+": 0.0182
+      }
+    },
+    {
+      "fy": 2002,
+      "n_loans": 45062,
+      "psi": 0.0127,
+      "rag": "GREEN",
+      "is_dev": true,
+      "score_distribution": {
+        "<480": 0.0485,
+        "480-499": 0.0386,
+        "500-519": 0.0447,
+        "520-534": 0.0882,
+        "535-544": 0.1181,
+        "545-554": 0.1572,
+        "555-564": 0.213,
+        "565-574": 0.1711,
+        "575-589": 0.1018,
+        "590+": 0.0189
+      }
+    },
+    {
+      "fy": 2003,
+      "n_loans": 58969,
+      "psi": 0.0034,
+      "rag": "GREEN",
+      "is_dev": true,
+      "score_distribution": {
+        "<480": 0.0607,
+        "480-499": 0.0447,
+        "500-519": 0.0528,
+        "520-534": 0.0952,
+        "535-544": 0.1151,
+        "545-554": 0.1497,
+        "555-564": 0.2036,
+        "565-574": 0.1656,
+        "575-589": 0.0961,
+        "590+": 0.0163
+      }
+    },
+    {
+      "fy": 2004,
+      "n_loans": 71027,
+      "psi": 0.0085,
+      "rag": "GREEN",
+      "is_dev": true,
+      "score_distribution": {
+        "<480": 0.0753,
+        "480-499": 0.052,
+        "500-519": 0.0611,
+        "520-534": 0.1085,
+        "535-544": 0.1222,
+        "545-554": 0.1521,
+        "555-564": 0.1915,
+        "565-574": 0.1451,
+        "575-589": 0.0793,
+        "590+": 0.0128
+      }
+    },
+    {
+      "fy": 2005,
+      "n_loans": 84030,
+      "psi": 0.1136,
+      "rag": "AMBER",
+      "is_dev": false,
+      "score_distribution": {
+        "<480": 0.1133,
+        "480-499": 0.0566,
+        "500-519": 0.0855,
+        "520-534": 0.1376,
+        "535-544": 0.1313,
+        "545-554": 0.1522,
+        "555-564": 0.1571,
+        "565-574": 0.1036,
+        "575-589": 0.0537,
+        "590+": 0.0091
+      }
+    },
+    {
+      "fy": 2006,
+      "n_loans": 86068,
+      "psi": 0.1973,
+      "rag": "AMBER",
+      "is_dev": false,
+      "score_distribution": {
+        "<480": 0.116,
+        "480-499": 0.062,
+        "500-519": 0.1068,
+        "520-534": 0.1473,
+        "535-544": 0.1426,
+        "545-554": 0.1489,
+        "555-564": 0.1389,
+        "565-574": 0.0858,
+        "575-589": 0.0446,
+        "590+": 0.0071
+      }
+    },
+    {
+      "fy": 2007,
+      "n_loans": 87697,
+      "psi": 0.2049,
+      "rag": "AMBER",
+      "is_dev": false,
+      "score_distribution": {
+        "<480": 0.099,
+        "480-499": 0.0581,
+        "500-519": 0.1173,
+        "520-534": 0.1527,
+        "535-544": 0.1501,
+        "545-554": 0.1523,
+        "555-564": 0.1376,
+        "565-574": 0.0826,
+        "575-589": 0.0428,
+        "590+": 0.0076
+      }
+    },
+    {
+      "fy": 2008,
+      "n_loans": 60960,
+      "psi": 0.1311,
+      "rag": "AMBER",
+      "is_dev": false,
+      "score_distribution": {
+        "<480": 0.0814,
+        "480-499": 0.0486,
+        "500-519": 0.1024,
+        "520-534": 0.15,
+        "535-544": 0.1529,
+        "545-554": 0.1621,
+        "555-564": 0.1449,
+        "565-574": 0.0949,
+        "575-589": 0.0525,
+        "590+": 0.0102
+      }
+    },
+    {
+      "fy": 2009,
+      "n_loans": 36177,
+      "psi": 0.0576,
+      "rag": "GREEN",
+      "is_dev": false,
+      "score_distribution": {
+        "<480": 0.0576,
+        "480-499": 0.0358,
+        "500-519": 0.0849,
+        "520-534": 0.1378,
+        "535-544": 0.1428,
+        "545-554": 0.1714,
+        "555-564": 0.1609,
+        "565-574": 0.1133,
+        "575-589": 0.0756,
+        "590+": 0.0199
+      }
+    }
+  ],
+  "gini_by_year": [
+    {
+      "fy": 2000,
+      "auc": 0.7199,
+      "gini": 0.4399,
+      "ks": 0.3288,
+      "rag": "AMBER",
+      "is_dev": true
+    },
+    {
+      "fy": 2001,
+      "auc": 0.7412,
+      "gini": 0.4823,
+      "ks": 0.3646,
+      "rag": "AMBER",
+      "is_dev": true
+    },
+    {
+      "fy": 2002,
+      "auc": 0.783,
+      "gini": 0.5661,
+      "ks": 0.433,
+      "rag": "GREEN",
+      "is_dev": true
+    },
+    {
+      "fy": 2003,
+      "auc": 0.8205,
+      "gini": 0.6409,
+      "ks": 0.5092,
+      "rag": "GREEN",
+      "is_dev": true
+    },
+    {
+      "fy": 2004,
+      "auc": 0.8079,
+      "gini": 0.6157,
+      "ks": 0.493,
+      "rag": "GREEN",
+      "is_dev": true
+    },
+    {
+      "fy": 2005,
+      "auc": 0.7867,
+      "gini": 0.5734,
+      "ks": 0.4792,
+      "rag": "GREEN",
+      "is_dev": false
+    },
+    {
+      "fy": 2006,
+      "auc": 0.7571,
+      "gini": 0.5141,
+      "ks": 0.4303,
+      "rag": "GREEN",
+      "is_dev": false
+    },
+    {
+      "fy": 2007,
+      "auc": 0.7189,
+      "gini": 0.4377,
+      "ks": 0.3637,
+      "rag": "AMBER",
+      "is_dev": false
+    },
+    {
+      "fy": 2008,
+      "auc": 0.7016,
+      "gini": 0.4031,
+      "ks": 0.3226,
+      "rag": "AMBER",
+      "is_dev": false
+    },
+    {
+      "fy": 2009,
+      "auc": 0.6928,
+      "gini": 0.3855,
+      "ks": 0.2984,
+      "rag": "RED",
+      "is_dev": false
+    }
+  ],
+  "calibration_by_year": [
+    {
+      "fy": 2000,
+      "n_loans": 37532,
+      "observed_default_rate": 0.148,
+      "expected_default_rate": 0.1559,
+      "oe_ratio": 0.95,
+      "rag": "GREEN",
+      "is_dev": true
+    },
+    {
+      "fy": 2001,
+      "n_loans": 37264,
+      "observed_default_rate": 0.1461,
+      "expected_default_rate": 0.1484,
+      "oe_ratio": 0.985,
+      "rag": "GREEN",
+      "is_dev": true
+    },
+    {
+      "fy": 2002,
+      "n_loans": 45062,
+      "observed_default_rate": 0.1348,
+      "expected_default_rate": 0.1408,
+      "oe_ratio": 0.957,
+      "rag": "GREEN",
+      "is_dev": true
+    },
+    {
+      "fy": 2003,
+      "n_loans": 58969,
+      "observed_default_rate": 0.1543,
+      "expected_default_rate": 0.1535,
+      "oe_ratio": 1.005,
+      "rag": "GREEN",
+      "is_dev": true
+    },
+    {
+      "fy": 2004,
+      "n_loans": 71027,
+      "observed_default_rate": 0.1853,
+      "expected_default_rate": 0.1708,
+      "oe_ratio": 1.085,
+      "rag": "GREEN",
+      "is_dev": true
+    },
+    {
+      "fy": 2005,
+      "n_loans": 84030,
+      "observed_default_rate": 0.246,
+      "expected_default_rate": 0.2093,
+      "oe_ratio": 1.176,
+      "rag": "GREEN",
+      "is_dev": false
+    },
+    {
+      "fy": 2006,
+      "n_loans": 86068,
+      "observed_default_rate": 0.3229,
+      "expected_default_rate": 0.2211,
+      "oe_ratio": 1.461,
+      "rag": "AMBER",
+      "is_dev": false
+    },
+    {
+      "fy": 2007,
+      "n_loans": 87697,
+      "observed_default_rate": 0.3695,
+      "expected_default_rate": 0.2128,
+      "oe_ratio": 1.736,
+      "rag": "RED",
+      "is_dev": false
+    },
+    {
+      "fy": 2008,
+      "n_loans": 60960,
+      "observed_default_rate": 0.3061,
+      "expected_default_rate": 0.1938,
+      "oe_ratio": 1.579,
+      "rag": "RED",
+      "is_dev": false
+    },
+    {
+      "fy": 2009,
+      "n_loans": 36177,
+      "observed_default_rate": 0.149,
+      "expected_default_rate": 0.1657,
+      "oe_ratio": 0.9,
+      "rag": "GREEN",
+      "is_dev": false
+    }
+  ],
+  "csi_by_feature": {
+    "term_band": [
+      {
+        "fy": 2000,
+        "csi": 0.0422,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2001,
+        "csi": 0.0109,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2002,
+        "csi": 0.0092,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2003,
+        "csi": 0.0111,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2004,
+        "csi": 0.0212,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2005,
+        "csi": 0.0586,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2006,
+        "csi": 0.0977,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2007,
+        "csi": 0.1223,
+        "rag": "AMBER"
+      },
+      {
+        "fy": 2008,
+        "csi": 0.0641,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2009,
+        "csi": 0.0375,
+        "rag": "GREEN"
+      }
+    ],
+    "loan_amt_band": [
+      {
+        "fy": 2000,
+        "csi": 0.1155,
+        "rag": "AMBER"
+      },
+      {
+        "fy": 2001,
+        "csi": 0.0706,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2002,
+        "csi": 0.0274,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2003,
+        "csi": 0.0396,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2004,
+        "csi": 0.0525,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2005,
+        "csi": 0.1078,
+        "rag": "AMBER"
+      },
+      {
+        "fy": 2006,
+        "csi": 0.1908,
+        "rag": "AMBER"
+      },
+      {
+        "fy": 2007,
+        "csi": 0.2221,
+        "rag": "AMBER"
+      },
+      {
+        "fy": 2008,
+        "csi": 0.126,
+        "rag": "AMBER"
+      },
+      {
+        "fy": 2009,
+        "csi": 0.0478,
+        "rag": "GREEN"
+      }
+    ],
+    "guar_band": [
+      {
+        "fy": 2000,
+        "csi": 1.0853,
+        "rag": "RED"
+      },
+      {
+        "fy": 2001,
+        "csi": 0.0769,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2002,
+        "csi": 0.0388,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2003,
+        "csi": 0.0652,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2004,
+        "csi": 0.1185,
+        "rag": "AMBER"
+      },
+      {
+        "fy": 2005,
+        "csi": 0.205,
+        "rag": "AMBER"
+      },
+      {
+        "fy": 2006,
+        "csi": 0.3293,
+        "rag": "RED"
+      },
+      {
+        "fy": 2007,
+        "csi": 0.3254,
+        "rag": "RED"
+      },
+      {
+        "fy": 2008,
+        "csi": 0.146,
+        "rag": "AMBER"
+      },
+      {
+        "fy": 2009,
+        "csi": 0.4895,
+        "rag": "RED"
+      }
+    ],
+    "delivery_method": [
+      {
+        "fy": 2000,
+        "csi": 0.2727,
+        "rag": "RED"
+      },
+      {
+        "fy": 2001,
+        "csi": 0.1208,
+        "rag": "AMBER"
+      },
+      {
+        "fy": 2002,
+        "csi": 0.037,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2003,
+        "csi": 0.0394,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2004,
+        "csi": 0.1302,
+        "rag": "AMBER"
+      },
+      {
+        "fy": 2005,
+        "csi": 0.2892,
+        "rag": "RED"
+      },
+      {
+        "fy": 2006,
+        "csi": 1.3535,
+        "rag": "RED"
+      },
+      {
+        "fy": 2007,
+        "csi": 1.4239,
+        "rag": "RED"
+      },
+      {
+        "fy": 2008,
+        "csi": 1.2959,
+        "rag": "RED"
+      },
+      {
+        "fy": 2009,
+        "csi": 1.2307,
+        "rag": "RED"
+      }
+    ],
+    "is_revolver": [
+      {
+        "fy": 2000,
+        "csi": 0.2411,
+        "rag": "AMBER"
+      },
+      {
+        "fy": 2001,
+        "csi": 0.0882,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2002,
+        "csi": 0.014,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2003,
+        "csi": 0.0262,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2004,
+        "csi": 0.0559,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2005,
+        "csi": 0.1252,
+        "rag": "AMBER"
+      },
+      {
+        "fy": 2006,
+        "csi": 0.2744,
+        "rag": "RED"
+      },
+      {
+        "fy": 2007,
+        "csi": 0.2852,
+        "rag": "RED"
+      },
+      {
+        "fy": 2008,
+        "csi": 0.1702,
+        "rag": "AMBER"
+      },
+      {
+        "fy": 2009,
+        "csi": 0.0495,
+        "rag": "GREEN"
+      }
+    ],
+    "same_state_bank": [
+      {
+        "fy": 2000,
+        "csi": 0.0146,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2001,
+        "csi": 0.0088,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2002,
+        "csi": 0.0004,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2003,
+        "csi": 0.0035,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2004,
+        "csi": 0.0066,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2005,
+        "csi": 0.0172,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2006,
+        "csi": 0.0316,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2007,
+        "csi": 0.026,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2008,
+        "csi": 0.0001,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2009,
+        "csi": 0.0822,
+        "rag": "GREEN"
+      }
+    ],
+    "business_age": [
+      {
+        "fy": 2000,
+        "csi": 0.0651,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2001,
+        "csi": 0.035,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2002,
+        "csi": 0.0361,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2003,
+        "csi": 0.0216,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2004,
+        "csi": 0.0531,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2005,
+        "csi": 0.9325,
+        "rag": "RED"
+      },
+      {
+        "fy": 2006,
+        "csi": 1.3795,
+        "rag": "RED"
+      },
+      {
+        "fy": 2007,
+        "csi": 1.6674,
+        "rag": "RED"
+      },
+      {
+        "fy": 2008,
+        "csi": 1.7883,
+        "rag": "RED"
+      },
+      {
+        "fy": 2009,
+        "csi": 2.5088,
+        "rag": "RED"
+      }
+    ],
+    "business_type": [
+      {
+        "fy": 2000,
+        "csi": 0.001,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2001,
+        "csi": 0.0006,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2002,
+        "csi": 0.0005,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2003,
+        "csi": 0.0011,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2004,
+        "csi": 0.0013,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2005,
+        "csi": 0.007,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2006,
+        "csi": 0.0074,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2007,
+        "csi": 0.0156,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2008,
+        "csi": 0.0455,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2009,
+        "csi": 0.0923,
+        "rag": "GREEN"
+      }
+    ],
+    "industry": [
+      {
+        "fy": 2000,
+        "csi": 0.9715,
+        "rag": "RED"
+      },
+      {
+        "fy": 2001,
+        "csi": 0.2559,
+        "rag": "RED"
+      },
+      {
+        "fy": 2002,
+        "csi": 0.4499,
+        "rag": "RED"
+      },
+      {
+        "fy": 2003,
+        "csi": 0.4482,
+        "rag": "RED"
+      },
+      {
+        "fy": 2004,
+        "csi": 0.4502,
+        "rag": "RED"
+      },
+      {
+        "fy": 2005,
+        "csi": 0.4636,
+        "rag": "RED"
+      },
+      {
+        "fy": 2006,
+        "csi": 0.488,
+        "rag": "RED"
+      },
+      {
+        "fy": 2007,
+        "csi": 0.502,
+        "rag": "RED"
+      },
+      {
+        "fy": 2008,
+        "csi": 0.4836,
+        "rag": "RED"
+      },
+      {
+        "fy": 2009,
+        "csi": 0.4903,
+        "rag": "RED"
+      }
+    ],
+    "region": [
+      {
+        "fy": 2000,
+        "csi": 0.0011,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2001,
+        "csi": 0.0027,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2002,
+        "csi": 0.0028,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2003,
+        "csi": 0.0008,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2004,
+        "csi": 0.002,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2005,
+        "csi": 0.0156,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2006,
+        "csi": 0.0156,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2007,
+        "csi": 0.0289,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2008,
+        "csi": 0.0387,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2009,
+        "csi": 0.0524,
+        "rag": "GREEN"
+      }
+    ],
+    "jobs_band": [
+      {
+        "fy": 2000,
+        "csi": 0.0927,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2001,
+        "csi": 0.0384,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2002,
+        "csi": 0.004,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2003,
+        "csi": 0.0338,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2004,
+        "csi": 0.0206,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2005,
+        "csi": 0.0826,
+        "rag": "GREEN"
+      },
+      {
+        "fy": 2006,
+        "csi": 0.4715,
+        "rag": "RED"
+      },
+      {
+        "fy": 2007,
+        "csi": 0.6617,
+        "rag": "RED"
+      },
+      {
+        "fy": 2008,
+        "csi": 0.6625,
+        "rag": "RED"
+      },
+      {
+        "fy": 2009,
+        "csi": 0.6789,
+        "rag": "RED"
+      }
+    ]
+  },
+  "segments": {
+    "industry": [
+      {
+        "industry": "Accommodation & Food Services",
+        "total_loans": 70150,
+        "default_rate_dev": 0.1725,
+        "default_rate_crisis": 0.3517,
+        "default_rate_overall": 0.2524,
+        "avg_score": 542.0
+      },
+      {
+        "industry": "Administrative & Support & Waste Management",
+        "total_loans": 31107,
+        "default_rate_dev": 0.1458,
+        "default_rate_crisis": 0.3342,
+        "default_rate_overall": 0.2367,
+        "avg_score": 540.0
+      },
+      {
+        "industry": "Agriculture, Forestry & Fishing",
+        "total_loans": 4430,
+        "default_rate_dev": 0.1793,
+        "default_rate_crisis": 0.1959,
+        "default_rate_overall": 0.1734,
+        "avg_score": 534.0
+      },
+      {
+        "industry": "Arts, Entertainment & Recreation",
+        "total_loans": 12254,
+        "default_rate_dev": 0.1835,
+        "default_rate_crisis": 0.3425,
+        "default_rate_overall": 0.2586,
+        "avg_score": 536.0
+      },
+      {
+        "industry": "Construction",
+        "total_loans": 54543,
+        "default_rate_dev": 0.1562,
+        "default_rate_crisis": 0.3549,
+        "default_rate_overall": 0.2643,
+        "avg_score": 533.0
+      },
+      {
+        "industry": "Educational Services",
+        "total_loans": 6685,
+        "default_rate_dev": 0.1453,
+        "default_rate_crisis": 0.3188,
+        "default_rate_overall": 0.2332,
+        "avg_score": 544.0
+      },
+      {
+        "industry": "Finance & Insurance",
+        "total_loans": 9317,
+        "default_rate_dev": 0.1295,
+        "default_rate_crisis": 0.3941,
+        "default_rate_overall": 0.2722,
+        "avg_score": 545.0
+      },
+      {
+        "industry": "Health Care & Social Assistance",
+        "total_loans": 42294,
+        "default_rate_dev": 0.0919,
+        "default_rate_crisis": 0.2098,
+        "default_rate_overall": 0.1438,
+        "avg_score": 564.0
+      },
+      {
+        "industry": "Information & Media",
+        "total_loans": 10021,
+        "default_rate_dev": 0.179,
+        "default_rate_crisis": 0.338,
+        "default_rate_overall": 0.2628,
+        "avg_score": 531.0
+      },
+      {
+        "industry": "Management of Companies",
+        "total_loans": 157,
+        "default_rate_dev": 0.0533,
+        "default_rate_crisis": 0.3636,
+        "default_rate_overall": 0.1847,
+        "avg_score": 589.0
+      },
+      {
+        "industry": "Manufacturing (Food, Textiles, Apparel)",
+        "total_loans": 9456,
+        "default_rate_dev": 0.1692,
+        "default_rate_crisis": 0.3335,
+        "default_rate_overall": 0.2411,
+        "avg_score": 537.0
+      },
+      {
+        "industry": "Manufacturing (Metal, Machinery, Electronics)",
+        "total_loans": 26778,
+        "default_rate_dev": 0.1396,
+        "default_rate_crisis": 0.2684,
+        "default_rate_overall": 0.19,
+        "avg_score": 544.0
+      },
+      {
+        "industry": "Manufacturing (Wood, Paper, Chemical, Plastics)",
+        "total_loans": 13372,
+        "default_rate_dev": 0.1696,
+        "default_rate_crisis": 0.3158,
+        "default_rate_overall": 0.2278,
+        "avg_score": 537.0
+      },
+      {
+        "industry": "Mining, Quarrying & Oil Extraction",
+        "total_loans": 1118,
+        "default_rate_dev": 0.1119,
+        "default_rate_crisis": 0.1535,
+        "default_rate_overall": 0.1306,
+        "avg_score": 553.0
+      },
+      {
+        "industry": "Other / Unclassified",
+        "total_loans": 16885,
+        "default_rate_dev": 0.1603,
+        "default_rate_crisis": NaN,
+        "default_rate_overall": 0.1603,
+        "avg_score": 543.0
+      },
+      {
+        "industry": "Other Services (Repair, Personal, Laundry)",
+        "total_loans": 61204,
+        "default_rate_dev": 0.1578,
+        "default_rate_crisis": 0.3344,
+        "default_rate_overall": 0.2384,
+        "avg_score": 541.0
+      },
+      {
+        "industry": "Postal, Couriers & Warehousing",
+        "total_loans": 2114,
+        "default_rate_dev": 0.1699,
+        "default_rate_crisis": 0.3208,
+        "default_rate_overall": 0.2427,
+        "avg_score": 533.0
+      },
+      {
+        "industry": "Professional, Scientific & Technical Services",
+        "total_loans": 57453,
+        "default_rate_dev": 0.1207,
+        "default_rate_crisis": 0.3012,
+        "default_rate_overall": 0.2106,
+        "avg_score": 547.0
+      },
+      {
+        "industry": "Public Administration",
+        "total_loans": 103,
+        "default_rate_dev": 0.2353,
+        "default_rate_crisis": 0.3016,
+        "default_rate_overall": 0.301,
+        "avg_score": 501.0
+      },
+      {
+        "industry": "Real Estate, Rental & Leasing",
+        "total_loans": 12603,
+        "default_rate_dev": 0.1622,
+        "default_rate_crisis": 0.4254,
+        "default_rate_overall": 0.3076,
+        "avg_score": 536.0
+      },
+      {
+        "industry": "Retail Trade (General, Clothing, Sporting, Online)",
+        "total_loans": 32775,
+        "default_rate_dev": 0.2131,
+        "default_rate_crisis": 0.3672,
+        "default_rate_overall": 0.2823,
+        "avg_score": 525.0
+      },
+      {
+        "industry": "Retail Trade (Motor, Furniture, Electronics, Food)",
+        "total_loans": 75594,
+        "default_rate_dev": 0.1748,
+        "default_rate_crisis": 0.367,
+        "default_rate_overall": 0.2621,
+        "avg_score": 535.0
+      },
+      {
+        "industry": "Transportation & Warehousing",
+        "total_loans": 19003,
+        "default_rate_dev": 0.1663,
+        "default_rate_crisis": 0.3655,
+        "default_rate_overall": 0.278,
+        "avg_score": 530.0
+      },
+      {
+        "industry": "Utilities",
+        "total_loans": 493,
+        "default_rate_dev": 0.1028,
+        "default_rate_crisis": 0.2857,
+        "default_rate_overall": 0.1765,
+        "avg_score": 555.0
+      },
+      {
+        "industry": "Wholesale Trade",
+        "total_loans": 34877,
+        "default_rate_dev": 0.1694,
+        "default_rate_crisis": 0.3799,
+        "default_rate_overall": 0.263,
+        "avg_score": 530.0
+      }
+    ],
+    "business_age": [
+      {
+        "business_age": "Established (5+ Years)",
+        "total_loans": 133839,
+        "default_rate_dev": 0.2075,
+        "default_rate_crisis": 0.3555,
+        "default_rate_overall": 0.3097,
+        "avg_score": 525.0
+      },
+      {
+        "business_age": "New (<1 Year)",
+        "total_loans": 135785,
+        "default_rate_dev": 0.1743,
+        "default_rate_crisis": 0.3028,
+        "default_rate_overall": 0.2303,
+        "avg_score": 540.0
+      },
+      {
+        "business_age": "Startup",
+        "total_loans": 20910,
+        "default_rate_dev": 0.1332,
+        "default_rate_crisis": 0.3181,
+        "default_rate_overall": 0.2747,
+        "avg_score": 550.0
+      },
+      {
+        "business_age": "Young (1-4 Years)",
+        "total_loans": 314252,
+        "default_rate_dev": 0.1506,
+        "default_rate_crisis": 0.3379,
+        "default_rate_overall": 0.2093,
+        "avg_score": 545.0
+      }
+    ],
+    "loan_amt_band": [
+      {
+        "loan_amt_band": "$100k-$250k",
+        "total_loans": 103575,
+        "default_rate_dev": 0.1463,
+        "default_rate_crisis": 0.2698,
+        "default_rate_overall": 0.1861,
+        "avg_score": 547.0
+      },
+      {
+        "loan_amt_band": "$250k-$500k",
+        "total_loans": 57318,
+        "default_rate_dev": 0.1341,
+        "default_rate_crisis": 0.3059,
+        "default_rate_overall": 0.1969,
+        "avg_score": 547.0
+      },
+      {
+        "loan_amt_band": "$25k-$50k",
+        "total_loans": 126646,
+        "default_rate_dev": 0.1787,
+        "default_rate_crisis": 0.3843,
+        "default_rate_overall": 0.2812,
+        "avg_score": 537.0
+      },
+      {
+        "loan_amt_band": "$50k-$100k",
+        "total_loans": 92060,
+        "default_rate_dev": 0.1451,
+        "default_rate_crisis": 0.336,
+        "default_rate_overall": 0.2229,
+        "avg_score": 534.0
+      },
+      {
+        "loan_amt_band": "<$25k",
+        "total_loans": 171028,
+        "default_rate_dev": 0.1799,
+        "default_rate_crisis": 0.3402,
+        "default_rate_overall": 0.2722,
+        "avg_score": 533.0
+      },
+      {
+        "loan_amt_band": ">$500k",
+        "total_loans": 54159,
+        "default_rate_dev": 0.1441,
+        "default_rate_crisis": 0.3055,
+        "default_rate_overall": 0.203,
+        "avg_score": 554.0
+      }
+    ],
+    "region": [
+      {
+        "region": "Midwest",
+        "total_loans": 127222,
+        "default_rate_dev": 0.1699,
+        "default_rate_crisis": 0.2831,
+        "default_rate_overall": 0.2235,
+        "avg_score": 536.0
+      },
+      {
+        "region": "Northeast",
+        "total_loans": 136384,
+        "default_rate_dev": 0.1304,
+        "default_rate_crisis": 0.3012,
+        "default_rate_overall": 0.2033,
+        "avg_score": 545.0
+      },
+      {
+        "region": "Other",
+        "total_loans": 7317,
+        "default_rate_dev": 0.1165,
+        "default_rate_crisis": 0.2454,
+        "default_rate_overall": 0.1678,
+        "avg_score": 550.0
+      },
+      {
+        "region": "South",
+        "total_loans": 165132,
+        "default_rate_dev": 0.1966,
+        "default_rate_crisis": 0.3644,
+        "default_rate_overall": 0.2727,
+        "avg_score": 529.0
+      },
+      {
+        "region": "West",
+        "total_loans": 168731,
+        "default_rate_dev": 0.1381,
+        "default_rate_crisis": 0.3765,
+        "default_rate_overall": 0.2478,
+        "avg_score": 548.0
+      }
+    ],
+    "is_revolver": [
+      {
+        "is_revolver": "Revolving Line",
+        "total_loans": 177377,
+        "default_rate_dev": 0.2012,
+        "default_rate_crisis": 0.3311,
+        "default_rate_overall": 0.269,
+        "avg_score": 530.0
+      },
+      {
+        "is_revolver": "Term Loan",
+        "total_loans": 427409,
+        "default_rate_dev": 0.1478,
+        "default_rate_crisis": 0.3392,
+        "default_rate_overall": 0.2259,
+        "avg_score": 544.0
+      }
+    ]
+  }
+}

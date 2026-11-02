@@ -1,0 +1,1095 @@
+{
+  "scaling": {
+    "base_score": 600,
+    "base_odds": 50.0,
+    "pdo": 20.0,
+    "factor": 28.8539,
+    "offset": 487.1229,
+    "intercept": -1.6765
+  },
+  "information_values": {
+    "term_band": 0.9989,
+    "loan_amt_band": 0.017,
+    "guar_band": 0.007,
+    "delivery_method": 0.0523,
+    "is_revolver": 0.021,
+    "same_state_bank": 0.0195,
+    "business_age": 0.0078,
+    "business_type": 0.0052,
+    "industry": 0.0469,
+    "region": 0.0422,
+    "jobs_band": 0.0016
+  },
+  "feature_coefficients": {
+    "term_band": -1.0689,
+    "loan_amt_band": 1.5621,
+    "guar_band": 1.1523,
+    "delivery_method": -0.9168,
+    "is_revolver": -1.001,
+    "same_state_bank": -1.2106,
+    "business_age": -1.6806,
+    "business_type": -1.424,
+    "industry": -1.1689,
+    "region": -1.3703,
+    "jobs_band": -0.2886
+  },
+  "scorecard_points": {
+    "term_band": {
+      "Long (61-120m)": 72,
+      "Medium (36-60m)": 37,
+      "Real Estate / Extended (>120m)": 73,
+      "Short (<36m)": -12
+    },
+    "loan_amt_band": {
+      "$100k-$250k": 45,
+      "$250k-$500k": 40,
+      "$25k-$50k": 55,
+      "$50k-$100k": 44,
+      "<$25k": 56,
+      ">$500k": 45
+    },
+    "guar_band": {
+      "High (>80%)": 53,
+      "Low (<=50%)": 49,
+      "Moderate (51-74%)": 47,
+      "Standard (75-80%)": 46
+    },
+    "delivery_method": {
+      "Community Express": 21,
+      "Low Documentation": 50,
+      "Other Specialised": 51,
+      "Preferred Lender (PLP)": 53,
+      "SBA Express": 49,
+      "Standard 7(a)": 49
+    },
+    "is_revolver": {
+      "Revolving Line": 40,
+      "Term Loan": 51
+    },
+    "same_state_bank": {
+      "Local Bank (Same State)": 57,
+      "Out-of-State Bank": 46
+    },
+    "business_age": {
+      "Established (5+ Years)": 33,
+      "New (<1 Year)": 43,
+      "Startup": 57,
+      "Young (1-4 Years)": 51
+    },
+    "business_type": {
+      "Corporation": 49,
+      "Partnership": 62,
+      "Sole Proprietorship": 46
+    },
+    "industry": {
+      "Accommodation & Food Services": 45,
+      "Administrative & Support & Waste Management": 53,
+      "Agriculture, Forestry & Fishing": 40,
+      "Arts, Entertainment & Recreation": 43,
+      "Construction": 49,
+      "Educational Services": 53,
+      "Finance & Insurance": 58,
+      "Health Care & Social Assistance": 69,
+      "Information & Media": 45,
+      "Management of Companies": 90,
+      "Manufacturing (Food, Textiles, Apparel)": 45,
+      "Manufacturing (Metal, Machinery, Electronics)": 54,
+      "Manufacturing (Wood, Paper, Chemical, Plastics)": 46,
+      "Mining, Quarrying & Oil Extraction": 64,
+      "Other / Unclassified": 47,
+      "Other Services (Repair, Personal, Laundry)": 49,
+      "Postal, Couriers & Warehousing": 44,
+      "Professional, Scientific & Technical Services": 59,
+      "Public Administration": 17,
+      "Real Estate, Rental & Leasing": 48,
+      "Retail Trade (General, Clothing, Sporting, Online)": 36,
+      "Retail Trade (Motor, Furniture, Electronics, Food)": 44,
+      "Transportation & Warehousing": 47,
+      "Utilities": 65,
+      "Wholesale Trade": 45
+    },
+    "region": {
+      "Midwest": 45,
+      "Northeast": 57,
+      "Other": 61,
+      "South": 38,
+      "West": 55
+    },
+    "jobs_band": {
+      "0 Jobs": 49,
+      "1-2 Jobs": 49,
+      "3-5 Jobs": 48,
+      "6-10 Jobs": 48,
+      ">10 Jobs": 49
+    }
+  },
+  "woe_tables": {
+    "term_band": [
+      {
+        "term_band": "Long (61-120m)",
+        "count": 85863,
+        "bads": 6839,
+        "goods": 79024,
+        "distr_good": 0.5362464883351655,
+        "distr_bad": 0.2484109977118367,
+        "woe": 0.7695092983801618,
+        "iv_component": 0.22149208643846738,
+        "default_rate": 0.0797,
+        "pct_population": 0.4909
+      },
+      {
+        "term_band": "Medium (36-60m)",
+        "count": 34250,
+        "bads": 7283,
+        "goods": 26967,
+        "distr_good": 0.18299675637528331,
+        "distr_bad": 0.26453710093342536,
+        "woe": -0.36851308168188646,
+        "iv_component": 0.030048683654523765,
+        "default_rate": 0.2126,
+        "pct_population": 0.1958
+      },
+      {
+        "term_band": "Real Estate / Extended (>120m)",
+        "count": 36498,
+        "bads": 2893,
+        "goods": 33605,
+        "distr_good": 0.22804106781754271,
+        "distr_bad": 0.10509207133258272,
+        "woe": 0.7746888989753002,
+        "iv_component": 0.09524722271705172,
+        "default_rate": 0.0793,
+        "pct_population": 0.2087
+      },
+      {
+        "term_band": "Short (<36m)",
+        "count": 18286,
+        "bads": 10517,
+        "goods": 7769,
+        "distr_good": 0.05272247329777561,
+        "distr_bad": 0.3819961500744561,
+        "woe": -1.980368727280355,
+        "iv_component": 0.6520832922051576,
+        "default_rate": 0.5751,
+        "pct_population": 0.1046
+      }
+    ],
+    "loan_amt_band": [
+      {
+        "loan_amt_band": "$100k-$250k",
+        "count": 38353,
+        "bads": 5609,
+        "goods": 32744,
+        "distr_good": 0.22219847183203725,
+        "distr_bad": 0.20373733338176006,
+        "woe": 0.08673941700129147,
+        "iv_component": 0.0016013083863571692,
+        "default_rate": 0.1462,
+        "pct_population": 0.2193
+      },
+      {
+        "loan_amt_band": "$250k-$500k",
+        "count": 19923,
+        "bads": 2668,
+        "goods": 17255,
+        "distr_good": 0.11709281652484291,
+        "distr_bad": 0.09692005956488578,
+        "woe": 0.1890804134038925,
+        "iv_component": 0.0038142732254849436,
+        "default_rate": 0.1339,
+        "pct_population": 0.1139
+      },
+      {
+        "loan_amt_band": "$25k-$50k",
+        "count": 32921,
+        "bads": 5815,
+        "goods": 27106,
+        "distr_good": 0.18393998615691542,
+        "distr_bad": 0.21121926415574038,
+        "woe": -0.13828721831523327,
+        "iv_component": 0.003772375472105447,
+        "default_rate": 0.1766,
+        "pct_population": 0.1882
+      },
+      {
+        "loan_amt_band": "$50k-$100k",
+        "count": 29779,
+        "bads": 4326,
+        "goods": 25453,
+        "distr_good": 0.17272301616383698,
+        "distr_bad": 0.15713870627973706,
+        "woe": 0.09456035399172888,
+        "iv_component": 0.001473657859357288,
+        "default_rate": 0.1453,
+        "pct_population": 0.1703
+      },
+      {
+        "loan_amt_band": "<$25k",
+        "count": 35583,
+        "bads": 6415,
+        "goods": 29168,
+        "distr_good": 0.19793235888875318,
+        "distr_bad": 0.23301129553626557,
+        "woe": -0.16316158053251514,
+        "iv_component": 0.005723534746808088,
+        "default_rate": 0.1803,
+        "pct_population": 0.2035
+      },
+      {
+        "loan_amt_band": ">$500k",
+        "count": 18338,
+        "bads": 2699,
+        "goods": 15639,
+        "distr_good": 0.10612692208514854,
+        "distr_bad": 0.09804598118621291,
+        "woe": 0.07919919157800018,
+        "iv_component": 0.0006400039863852998,
+        "default_rate": 0.1472,
+        "pct_population": 0.1049
+      }
+    ],
+    "guar_band": [
+      {
+        "guar_band": "High (>80%)",
+        "count": 36964,
+        "bads": 6527,
+        "goods": 30437,
+        "distr_good": 0.2065435717872508,
+        "distr_bad": 0.2370791413939636,
+        "woe": -0.1378826237908064,
+        "iv_component": 0.004210324456320364,
+        "default_rate": 0.1766,
+        "pct_population": 0.2113
+      },
+      {
+        "guar_band": "Low (<=50%)",
+        "count": 72843,
+        "bads": 11491,
+        "goods": 61352,
+        "distr_good": 0.41632737537830977,
+        "distr_bad": 0.41737188101550865,
+        "woe": -0.002505714562395299,
+        "iv_component": 2.61723298563321e-06,
+        "default_rate": 0.1578,
+        "pct_population": 0.4165
+      },
+      {
+        "guar_band": "Moderate (51-74%)",
+        "count": 2407,
+        "bads": 366,
+        "goods": 2041,
+        "distr_good": 0.013853263303611417,
+        "distr_bad": 0.013311299168270802,
+        "woe": 0.03990758639045609,
+        "iv_component": 2.1628480551634408e-05,
+        "default_rate": 0.1521,
+        "pct_population": 0.0138
+      },
+      {
+        "guar_band": "Standard (75-80%)",
+        "count": 62683,
+        "bads": 9148,
+        "goods": 53535,
+        "distr_good": 0.36328257535659514,
+        "distr_bad": 0.3322739984745578,
+        "woe": 0.08922105078598566,
+        "iv_component": 0.0027666178127933945,
+        "default_rate": 0.1459,
+        "pct_population": 0.3584
+      }
+    ],
+    "delivery_method": [
+      {
+        "delivery_method": "Community Express",
+        "count": 5241,
+        "bads": 1838,
+        "goods": 3403,
+        "distr_good": 0.02309555799845283,
+        "distr_bad": 0.06677441615515926,
+        "woe": -1.0616797108957887,
+        "iv_component": 0.04637295750007025,
+        "default_rate": 0.3507,
+        "pct_population": 0.03
+      },
+      {
+        "delivery_method": "Low Documentation",
+        "count": 25811,
+        "bads": 3955,
+        "goods": 21856,
+        "distr_good": 0.14831440087944303,
+        "distr_bad": 0.1436639668761123,
+        "woe": 0.03185734161809983,
+        "iv_component": 0.00014815046471653478,
+        "default_rate": 0.1532,
+        "pct_population": 0.1476
+      },
+      {
+        "delivery_method": "Other Specialised",
+        "count": 5811,
+        "bads": 856,
+        "goods": 4955,
+        "distr_good": 0.03362715958905039,
+        "distr_bad": 0.031108124795699705,
+        "woe": 0.07786502904012049,
+        "iv_component": 0.00019614471733732491,
+        "default_rate": 0.1473,
+        "pct_population": 0.0332
+      },
+      {
+        "delivery_method": "Preferred Lender (PLP)",
+        "count": 44462,
+        "bads": 6147,
+        "goods": 38315,
+        "distr_good": 0.26000230718076084,
+        "distr_bad": 0.22327752151963098,
+        "woe": 0.1522750159059732,
+        "iv_component": 0.005592267320692005,
+        "default_rate": 0.1383,
+        "pct_population": 0.2542
+      },
+      {
+        "delivery_method": "SBA Express",
+        "count": 72287,
+        "bads": 11375,
+        "goods": 60912,
+        "distr_good": 0.41334161204076925,
+        "distr_bad": 0.4131587549486071,
+        "woe": 0.00044248521222491814,
+        "iv_component": 8.091155923219926e-08,
+        "default_rate": 0.1574,
+        "pct_population": 0.4133
+      },
+      {
+        "delivery_method": "Standard 7(a)",
+        "count": 21285,
+        "bads": 3361,
+        "goods": 17924,
+        "distr_good": 0.12163253396305797,
+        "distr_bad": 0.12208985580939237,
+        "woe": -0.0037528138755727513,
+        "iv_component": 1.7162437705262933e-06,
+        "default_rate": 0.1579,
+        "pct_population": 0.1217
+      }
+    ],
+    "is_revolver": [
+      {
+        "is_revolver": "Revolving Line",
+        "count": 31497,
+        "bads": 6298,
+        "goods": 25199,
+        "distr_good": 0.17099941641898403,
+        "distr_bad": 0.22876184941706315,
+        "woe": -0.29102135980199295,
+        "iv_component": 0.016810101796572493,
+        "default_rate": 0.2,
+        "pct_population": 0.1801
+      },
+      {
+        "is_revolver": "Term Loan",
+        "count": 143400,
+        "bads": 21234,
+        "goods": 122166,
+        "distr_good": 0.829000583581016,
+        "distr_bad": 0.7712381505829369,
+        "woe": 0.07222364790318882,
+        "iv_component": 0.0041718136228848035,
+        "default_rate": 0.1481,
+        "pct_population": 0.8199
+      }
+    ],
+    "same_state_bank": [
+      {
+        "same_state_bank": "Local Bank (Same State)",
+        "count": 52580,
+        "bads": 6826,
+        "goods": 45754,
+        "distr_good": 0.3104820650624975,
+        "distr_bad": 0.24793883703192532,
+        "woe": 0.2249440473550386,
+        "iv_component": 0.014068726847846002,
+        "default_rate": 0.1298,
+        "pct_population": 0.3006
+      },
+      {
+        "same_state_bank": "Out-of-State Bank",
+        "count": 122317,
+        "bads": 20706,
+        "goods": 101611,
+        "distr_good": 0.6895179349375026,
+        "distr_bad": 0.7520611629680747,
+        "woe": -0.08682494596954095,
+        "iv_component": 0.005430312394515102,
+        "default_rate": 0.1693,
+        "pct_population": 0.6994
+      }
+    ],
+    "business_age": [
+      {
+        "business_age": "Established (5+ Years)",
+        "count": 2962,
+        "bads": 603,
+        "goods": 2359,
+        "distr_good": 0.016011155897561174,
+        "distr_bad": 0.02191915156357825,
+        "woe": -0.3140750324136121,
+        "iv_component": 0.0018555539303037937,
+        "default_rate": 0.2036,
+        "pct_population": 0.0169
+      },
+      {
+        "business_age": "New (<1 Year)",
+        "count": 43567,
+        "bads": 7600,
+        "goods": 35967,
+        "distr_good": 0.24406918827952173,
+        "distr_bad": 0.27605055751280283,
+        "woe": -0.12313228471535415,
+        "iv_component": 0.003937939062019236,
+        "default_rate": 0.1744,
+        "pct_population": 0.2491
+      },
+      {
+        "business_age": "Startup",
+        "count": 397,
+        "bads": 54,
+        "goods": 343,
+        "distr_good": 0.0023309311510117665,
+        "distr_bad": 0.0019794428503977046,
+        "woe": 0.1634524069507375,
+        "iv_component": 5.745160875039281e-05,
+        "default_rate": 0.136,
+        "pct_population": 0.0023
+      },
+      {
+        "business_age": "Young (1-4 Years)",
+        "count": 127971,
+        "bads": 19275,
+        "goods": 108696,
+        "distr_good": 0.7375955104976725,
+        "distr_bad": 0.7000871681255221,
+        "woe": 0.05219073240408167,
+        "iv_component": 0.001957587859665579,
+        "default_rate": 0.1506,
+        "pct_population": 0.7317
+      }
+    ],
+    "business_type": [
+      {
+        "business_type": "Corporation",
+        "count": 121050,
+        "bads": 18820,
+        "goods": 102230,
+        "distr_good": 0.6937183610873607,
+        "distr_bad": 0.6835615443286238,
+        "woe": 0.014749363360978696,
+        "iv_component": 0.0001498065809654887,
+        "default_rate": 0.1555,
+        "pct_population": 0.6921
+      },
+      {
+        "business_type": "Partnership",
+        "count": 6125,
+        "bads": 722,
+        "goods": 5403,
+        "distr_good": 0.036667209532728035,
+        "distr_bad": 0.026241237787382413,
+        "woe": 0.3345507477141649,
+        "iv_component": 0.003488016643052134,
+        "default_rate": 0.1179,
+        "pct_population": 0.035
+      },
+      {
+        "business_type": "Sole Proprietorship",
+        "count": 47722,
+        "bads": 7990,
+        "goods": 39732,
+        "distr_good": 0.2696178222927948,
+        "distr_bad": 0.2902153779101442,
+        "woe": -0.07361784649665702,
+        "iv_component": 0.0015163476876443825,
+        "default_rate": 0.1674,
+        "pct_population": 0.2729
+      }
+    ],
+    "industry": [
+      {
+        "industry": "Accommodation & Food Services",
+        "count": 20758,
+        "bads": 3607,
+        "goods": 17151,
+        "distr_good": 0.1163870906450606,
+        "distr_bad": 0.1310245886754077,
+        "woe": -0.11846338136427062,
+        "iv_component": 0.0017340075113877684,
+        "default_rate": 0.1738,
+        "pct_population": 0.1187
+      },
+      {
+        "industry": "Administrative & Support & Waste Management",
+        "count": 8316,
+        "bads": 1172,
+        "goods": 7144,
+        "distr_good": 0.0484813321933146,
+        "distr_bad": 0.042585261322776305,
+        "woe": 0.12967060554612223,
+        "iv_component": 0.0007645470801255531,
+        "default_rate": 0.1409,
+        "pct_population": 0.0475
+      },
+      {
+        "industry": "Agriculture, Forestry & Fishing",
+        "count": 1541,
+        "bads": 300,
+        "goods": 1241,
+        "distr_good": 0.008424602689901334,
+        "distr_bad": 0.010914175716413031,
+        "woe": -0.25890615206950907,
+        "iv_component": 0.0006445657725901855,
+        "default_rate": 0.1947,
+        "pct_population": 0.0088
+      },
+      {
+        "industry": "Arts, Entertainment & Recreation",
+        "count": 3330,
+        "bads": 598,
+        "goods": 2732,
+        "distr_good": 0.0185422689087035,
+        "distr_bad": 0.021737551302073874,
+        "woe": -0.15898830798980232,
+        "iv_component": 0.0005080125412715619,
+        "default_rate": 0.1796,
+        "pct_population": 0.019
+      },
+      {
+        "industry": "Construction",
+        "count": 12045,
+        "bads": 1901,
+        "goods": 10144,
+        "distr_good": 0.06883880949472741,
+        "distr_bad": 0.0690625794501144,
+        "woe": -0.003245364727678053,
+        "iv_component": 7.262151203270301e-07,
+        "default_rate": 0.1578,
+        "pct_population": 0.0689
+      },
+      {
+        "industry": "Educational Services",
+        "count": 1565,
+        "bads": 222,
+        "goods": 1343,
+        "distr_good": 0.00911675691814937,
+        "distr_bad": 0.008081211636944757,
+        "woe": 0.12057232340678285,
+        "iv_component": 0.0001248581005477704,
+        "default_rate": 0.1419,
+        "pct_population": 0.0089
+      },
+      {
+        "industry": "Finance & Insurance",
+        "count": 2210,
+        "bads": 271,
+        "goods": 1939,
+        "distr_good": 0.013161109075363381,
+        "distr_bad": 0.009860894199687647,
+        "woe": 0.2886893444635637,
+        "iv_component": 0.0009527368690477291,
+        "default_rate": 0.1226,
+        "pct_population": 0.0126
+      },
+      {
+        "industry": "Health Care & Social Assistance",
+        "count": 12544,
+        "bads": 1162,
+        "goods": 11382,
+        "distr_good": 0.07723966179444376,
+        "distr_bad": 0.04222206079976755,
+        "woe": 0.6039702267049577,
+        "iv_component": 0.021149588411418344,
+        "default_rate": 0.0926,
+        "pct_population": 0.0717
+      },
+      {
+        "industry": "Information & Media",
+        "count": 2604,
+        "bads": 448,
+        "goods": 2156,
+        "distr_good": 0.01463363326683224,
+        "distr_bad": 0.016289543456942578,
+        "woe": -0.1072008684534211,
+        "iv_component": 0.0001775150104606978,
+        "default_rate": 0.172,
+        "pct_population": 0.0149
+      },
+      {
+        "industry": "Management of Companies",
+        "count": 47,
+        "bads": 2,
+        "goods": 45,
+        "distr_good": 0.0003087550724047609,
+        "distr_bad": 9.080013075218828e-05,
+        "woe": 1.2238875910402816,
+        "iv_component": 0.00026675234849449225,
+        "default_rate": 0.0426,
+        "pct_population": 0.0003
+      },
+      {
+        "industry": "Manufacturing (Food, Textiles, Apparel)",
+        "count": 2816,
+        "bads": 482,
+        "goods": 2334,
+        "distr_good": 0.015841510253382735,
+        "distr_bad": 0.01752442523517234,
+        "woe": -0.10096190941051697,
+        "iv_component": 0.00016991030993704392,
+        "default_rate": 0.1712,
+        "pct_population": 0.0161
+      },
+      {
+        "industry": "Manufacturing (Metal, Machinery, Electronics)",
+        "count": 8694,
+        "bads": 1201,
+        "goods": 7493,
+        "distr_good": 0.05084958538604563,
+        "distr_bad": 0.043638542839501686,
+        "woe": 0.15293119886605921,
+        "iv_component": 0.0011027933817171257,
+        "default_rate": 0.1381,
+        "pct_population": 0.0497
+      },
+      {
+        "industry": "Manufacturing (Wood, Paper, Chemical, Plastics)",
+        "count": 4286,
+        "bads": 712,
+        "goods": 3574,
+        "distr_good": 0.024255934204633362,
+        "distr_bad": 0.02587803726437366,
+        "woe": -0.06473332997836717,
+        "iv_component": 0.00010500413262508783,
+        "default_rate": 0.1661,
+        "pct_population": 0.0245
+      },
+      {
+        "industry": "Mining, Quarrying & Oil Extraction",
+        "count": 305,
+        "bads": 32,
+        "goods": 273,
+        "distr_good": 0.0018559233473121343,
+        "distr_bad": 0.0011804016997784476,
+        "woe": 0.45252752948387603,
+        "iv_component": 0.00030569214227129694,
+        "default_rate": 0.1049,
+        "pct_population": 0.0017
+      },
+      {
+        "industry": "Other / Unclassified",
+        "count": 11647,
+        "bads": 1902,
+        "goods": 9745,
+        "distr_good": 0.06613126501363951,
+        "distr_bad": 0.06909889950241528,
+        "woe": -0.04389717378961356,
+        "iv_component": 0.00013027076689784082,
+        "default_rate": 0.1633,
+        "pct_population": 0.0666
+      },
+      {
+        "industry": "Other Services (Repair, Personal, Laundry)",
+        "count": 18136,
+        "bads": 2863,
+        "goods": 15273,
+        "distr_good": 0.10364330985437618,
+        "distr_bad": 0.10400246976355645,
+        "woe": -0.0034593553311551683,
+        "iv_component": 1.2424617465599749e-06,
+        "default_rate": 0.1579,
+        "pct_population": 0.1037
+      },
+      {
+        "industry": "Postal, Couriers & Warehousing",
+        "count": 577,
+        "bads": 101,
+        "goods": 476,
+        "distr_good": 0.003233445978041068,
+        "distr_bad": 0.0036864853085388444,
+        "woe": -0.13112507843005328,
+        "iv_component": 5.940481774341976e-05,
+        "default_rate": 0.175,
+        "pct_population": 0.0033
+      },
+      {
+        "industry": "Professional, Scientific & Technical Services",
+        "count": 14458,
+        "bads": 1742,
+        "goods": 12716,
+        "distr_good": 0.08629195336780533,
+        "distr_bad": 0.06328769113427524,
+        "woe": 0.3100454961215647,
+        "iv_component": 0.007132367897105412,
+        "default_rate": 0.1205,
+        "pct_population": 0.0827
+      },
+      {
+        "industry": "Public Administration",
+        "count": 13,
+        "bads": 4,
+        "goods": 9,
+        "distr_good": 6.446534478780723e-05,
+        "distr_bad": 0.00016344023535393891,
+        "woe": -0.930319601212247,
+        "iv_component": 9.207828072150941e-05,
+        "default_rate": 0.3077,
+        "pct_population": 0.0001
+      },
+      {
+        "industry": "Real Estate, Rental & Leasing",
+        "count": 2740,
+        "bads": 443,
+        "goods": 2297,
+        "distr_good": 0.015590434699998643,
+        "distr_bad": 0.0161079431954382,
+        "woe": -0.03265495056226006,
+        "iv_component": 1.689921433412833e-05,
+        "default_rate": 0.1617,
+        "pct_population": 0.0157
+      },
+      {
+        "industry": "Retail Trade (General, Clothing, Sporting, Online)",
+        "count": 9573,
+        "bads": 2032,
+        "goods": 7541,
+        "distr_good": 0.05117530502286823,
+        "distr_bad": 0.07382050630152907,
+        "woe": -0.3663794642561267,
+        "iv_component": 0.008296736712447914,
+        "default_rate": 0.2123,
+        "pct_population": 0.0547
+      },
+      {
+        "industry": "Retail Trade (Motor, Furniture, Electronics, Food)",
+        "count": 22119,
+        "bads": 3882,
+        "goods": 18237,
+        "distr_good": 0.12375649742817203,
+        "distr_bad": 0.14101260305814842,
+        "woe": -0.13053336523426928,
+        "iv_component": 0.0022524975387188378,
+        "default_rate": 0.1755,
+        "pct_population": 0.1265
+      },
+      {
+        "industry": "Transportation & Warehousing",
+        "count": 3991,
+        "bads": 651,
+        "goods": 3340,
+        "distr_good": 0.02266805097512316,
+        "distr_bad": 0.023662514074020268,
+        "woe": -0.04293562424183598,
+        "iv_component": 4.269789393661795e-05,
+        "default_rate": 0.1631,
+        "pct_population": 0.0228
+      },
+      {
+        "industry": "Utilities",
+        "count": 160,
+        "bads": 16,
+        "goods": 144,
+        "distr_good": 0.0009805518233513837,
+        "distr_bad": 0.0005992808629644426,
+        "woe": 0.492385123603484,
+        "iv_component": 0.00018773214895654303,
+        "default_rate": 0.1,
+        "pct_population": 0.0009
+      },
+      {
+        "industry": "Wholesale Trade",
+        "count": 10422,
+        "bads": 1786,
+        "goods": 8636,
+        "distr_good": 0.05860578423788391,
+        "distr_bad": 0.06488577343551374,
+        "woe": -0.10179499337259343,
+        "iv_component": 0.0006392714587526875,
+        "default_rate": 0.1714,
+        "pct_population": 0.0596
+      }
+    ],
+    "region": [
+      {
+        "region": "Midwest",
+        "count": 32208,
+        "bads": 5463,
+        "goods": 26745,
+        "distr_good": 0.18149030305497876,
+        "distr_bad": 0.19843460574583227,
+        "woe": -0.08925737817947539,
+        "iv_component": 0.001512404033265014,
+        "default_rate": 0.1696,
+        "pct_population": 0.1842
+      },
+      {
+        "region": "Northeast",
+        "count": 43814,
+        "bads": 5718,
+        "goods": 38096,
+        "distr_good": 0.2585162113377577,
+        "distr_bad": 0.20769621908255548,
+        "woe": 0.21888187811428128,
+        "iv_component": 0.011123575350571893,
+        "default_rate": 0.1305,
+        "pct_population": 0.2505
+      },
+      {
+        "region": "Other",
+        "count": 2671,
+        "bads": 323,
+        "goods": 2348,
+        "distr_good": 0.015936511814122662,
+        "distr_bad": 0.011749536919333163,
+        "woe": 0.30479898848362663,
+        "iv_component": 0.0012761857127381784,
+        "default_rate": 0.1209,
+        "pct_population": 0.0153
+      },
+      {
+        "region": "South",
+        "count": 46974,
+        "bads": 9248,
+        "goods": 37726,
+        "distr_good": 0.25600545580391676,
+        "distr_bad": 0.33590600370464535,
+        "woe": -0.27163261396007543,
+        "iv_component": 0.021703594683117125,
+        "default_rate": 0.1969,
+        "pct_population": 0.2686
+      },
+      {
+        "region": "West",
+        "count": 49230,
+        "bads": 6780,
+        "goods": 42450,
+        "distr_good": 0.2880616967278748,
+        "distr_bad": 0.24626811462608506,
+        "woe": 0.15675384266267375,
+        "iv_component": 0.006551304593093487,
+        "default_rate": 0.1377,
+        "pct_population": 0.2815
+      }
+    ],
+    "jobs_band": [
+      {
+        "jobs_band": "0 Jobs",
+        "count": 58107,
+        "bads": 9077,
+        "goods": 49030,
+        "distr_good": 0.33271243027564024,
+        "distr_bad": 0.32969527476119564,
+        "woe": 0.009109726100380806,
+        "iv_component": 2.7485460338843774e-05,
+        "default_rate": 0.1562,
+        "pct_population": 0.3322
+      },
+      {
+        "jobs_band": "1-2 Jobs",
+        "count": 27649,
+        "bads": 4390,
+        "goods": 23259,
+        "distr_good": 0.15783491443073708,
+        "distr_bad": 0.15946318962699307,
+        "woe": -0.010263468131604557,
+        "iv_component": 1.671175058625557e-05,
+        "default_rate": 0.1588,
+        "pct_population": 0.1581
+      },
+      {
+        "jobs_band": "3-5 Jobs",
+        "count": 32826,
+        "bads": 5411,
+        "goods": 27415,
+        "distr_good": 0.18603680631896097,
+        "distr_bad": 0.19654596302618677,
+        "woe": -0.05495177491506267,
+        "iv_component": 0.0005774968139225932,
+        "default_rate": 0.1648,
+        "pct_population": 0.1877
+      },
+      {
+        "jobs_band": "6-10 Jobs",
+        "count": 26553,
+        "bads": 4259,
+        "goods": 22294,
+        "distr_good": 0.1512865925654493,
+        "distr_bad": 0.1547052627755784,
+        "woe": -0.022345774268303812,
+        "iv_component": 7.639283281331948e-05,
+        "default_rate": 0.1604,
+        "pct_population": 0.1518
+      },
+      {
+        "jobs_band": ">10 Jobs",
+        "count": 29762,
+        "bads": 4395,
+        "goods": 25367,
+        "distr_good": 0.17213943514786315,
+        "distr_bad": 0.15964478988849745,
+        "woe": 0.07535353381953647,
+        "iv_component": 0.0009415156741147239,
+        "default_rate": 0.1477,
+        "pct_population": 0.1702
+      }
+    ]
+  },
+  "performance": {
+    "scorecard": {
+      "train": {
+        "auc": 0.7852,
+        "gini": 0.5704,
+        "ks": 0.4452
+      },
+      "test": {
+        "auc": 0.7916,
+        "gini": 0.5833,
+        "ks": 0.4554
+      },
+      "oot_overall": {
+        "auc": 0.7414,
+        "gini": 0.4828,
+        "ks": 0.3944
+      }
+    },
+    "challenger_gradient_boosting": {
+      "test": {
+        "auc": 0.8432,
+        "gini": 0.6864,
+        "ks": 0.5223
+      },
+      "oot_overall": {
+        "auc": 0.7827,
+        "gini": 0.5653,
+        "ks": 0.4385
+      }
+    }
+  },
+  "deciles": [
+    {
+      "decile": 1,
+      "count": 7312,
+      "min_score": 576,
+      "max_score": 620,
+      "avg_score": 583,
+      "avg_pred_pd": 0.0353,
+      "actual_default_rate": 0.0347,
+      "bads": 254,
+      "goods": 7058,
+      "bad_share": 0.0215
+    },
+    {
+      "decile": 2,
+      "count": 7229,
+      "min_score": 569,
+      "max_score": 575,
+      "avg_score": 571,
+      "avg_pred_pd": 0.0504,
+      "actual_default_rate": 0.0436,
+      "bads": 315,
+      "goods": 6914,
+      "bad_share": 0.0267
+    },
+    {
+      "decile": 3,
+      "count": 6678,
+      "min_score": 564,
+      "max_score": 568,
+      "avg_score": 565,
+      "avg_pred_pd": 0.0611,
+      "actual_default_rate": 0.0583,
+      "bads": 389,
+      "goods": 6289,
+      "bad_share": 0.033
+    },
+    {
+      "decile": 4,
+      "count": 8019,
+      "min_score": 559,
+      "max_score": 563,
+      "avg_score": 561,
+      "avg_pred_pd": 0.0716,
+      "actual_default_rate": 0.0576,
+      "bads": 462,
+      "goods": 7557,
+      "bad_share": 0.0392
+    },
+    {
+      "decile": 5,
+      "count": 8088,
+      "min_score": 553,
+      "max_score": 558,
+      "avg_score": 555,
+      "avg_pred_pd": 0.0854,
+      "actual_default_rate": 0.0847,
+      "bads": 685,
+      "goods": 7403,
+      "bad_share": 0.0581
+    },
+    {
+      "decile": 6,
+      "count": 7147,
+      "min_score": 547,
+      "max_score": 552,
+      "avg_score": 549,
+      "avg_pred_pd": 0.1029,
+      "actual_default_rate": 0.1035,
+      "bads": 740,
+      "goods": 6407,
+      "bad_share": 0.0627
+    },
+    {
+      "decile": 7,
+      "count": 7128,
+      "min_score": 540,
+      "max_score": 546,
+      "avg_score": 542,
+      "avg_pred_pd": 0.1263,
+      "actual_default_rate": 0.1163,
+      "bads": 829,
+      "goods": 6299,
+      "bad_share": 0.0703
+    },
+    {
+      "decile": 8,
+      "count": 8135,
+      "min_score": 528,
+      "max_score": 539,
+      "avg_score": 534,
+      "avg_pred_pd": 0.1641,
+      "actual_default_rate": 0.1614,
+      "bads": 1313,
+      "goods": 6822,
+      "bad_share": 0.1113
+    },
+    {
+      "decile": 9,
+      "count": 7614,
+      "min_score": 497,
+      "max_score": 527,
+      "avg_score": 516,
+      "avg_pred_pd": 0.2704,
+      "actual_default_rate": 0.2959,
+      "bads": 2253,
+      "goods": 5361,
+      "bad_share": 0.1909
+    },
+    {
+      "decile": 10,
+      "count": 7607,
+      "min_score": 421,
+      "max_score": 496,
+      "avg_score": 474,
+      "avg_pred_pd": 0.5997,
+      "actual_default_rate": 0.5993,
+      "bads": 4559,
+      "goods": 3048,
+      "bad_share": 0.3864
+    }
+  ]
+}
