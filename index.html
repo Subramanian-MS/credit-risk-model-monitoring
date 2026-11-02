@@ -41,8 +41,17 @@
       box-shadow: var(--shadow-md);
     }
     .header-content {
-      max-width: 1200px;
+      max-width: 1240px;
       margin: 0 auto;
+    }
+    .author-pill {
+      display: inline-block;
+      font-size: 0.85rem;
+      color: #a7f3d0;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
     }
     .badge {
       display: inline-block;
@@ -61,49 +70,102 @@
 
     h1 {
       font-size: 1.85rem;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 8px;
       letter-spacing: -0.02em;
     }
     header p {
       color: #e2e8f0;
       font-size: 0.95rem;
-      max-width: 900px;
+      max-width: 950px;
+      line-height: 1.6;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1240px;
       margin: 0 auto;
       padding: 24px;
     }
 
-    /* Tab Navigation */
+    /* User Guidance Callout Banner */
+    .guidance-box {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-left: 5px solid var(--primary);
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .guidance-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .guidance-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .step-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 12px 14px;
+      font-size: 0.85rem;
+    }
+    .step-card strong {
+      display: block;
+      color: var(--primary);
+      margin-bottom: 4px;
+      font-size: 0.88rem;
+    }
+
+    /* Tab Navigation - Modern Non-Truncating Wrapping Pills */
     .nav-tabs {
       display: flex;
-      gap: 6px;
-      border-bottom: 2px solid var(--border);
+      flex-wrap: wrap;
+      gap: 8px;
+      background: #ffffff;
+      padding: 8px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
       margin-bottom: 24px;
-      overflow-x: auto;
-      scrollbar-width: none;
+      box-shadow: var(--shadow-sm);
     }
-    .nav-tabs::-webkit-scrollbar { display: none; }
     .tab-btn {
-      background: none;
-      border: none;
-      padding: 12px 18px;
-      font-size: 0.92rem;
+      flex: 1 1 auto;
+      min-width: 160px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-size: 0.88rem;
       font-weight: 600;
       color: var(--text-muted);
       cursor: pointer;
-      border-bottom: 3px solid transparent;
-      margin-bottom: -2px;
-      white-space: nowrap;
+      text-align: center;
       transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
     }
-    .tab-btn:hover { color: var(--primary); }
-    .tab-btn.active {
+    .tab-btn:hover {
+      background: #f1f5f9;
       color: var(--primary);
-      border-bottom-color: var(--primary);
+      border-color: #cbd5e1;
+    }
+    .tab-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 2px 4px rgba(0, 90, 54, 0.2);
     }
 
     /* Tab Content Panes */
@@ -127,6 +189,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
     }
     .grid-2 {
       display: grid;
@@ -138,13 +202,8 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
     @media (max-width: 900px) {
-      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
     }
 
     /* Metric Boxes */
@@ -180,7 +239,7 @@
       margin-bottom: 6px;
       color: var(--text);
     }
-    .form-select, .form-input {
+    .form-select {
       width: 100%;
       padding: 10px 12px;
       border: 1px solid var(--border);
@@ -191,7 +250,7 @@
       outline: none;
       transition: border 0.15s ease;
     }
-    .form-select:focus, .form-input:focus {
+    .form-select:focus {
       border-color: var(--primary);
       box-shadow: 0 0 0 3px rgba(0, 90, 54, 0.15);
     }
@@ -251,19 +310,19 @@
       margin: 8px 0;
     }
 
-    /* SVG Charts */
-    .chart-container {
-      width: 100%;
+    /* SVG Chart Styles */
+    .chart-box {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
       margin: 16px 0;
     }
     svg {
       width: 100%;
       height: auto;
-      font-family: var(--font);
+      display: block;
     }
-    .grid-line { stroke: #e2e8f0; stroke-dasharray: 4,4; stroke-width: 1; }
-    .axis-text { font-size: 11px; fill: #64748b; }
-    .legend-text { font-size: 12px; fill: #334155; }
 
     .info-callout {
       background: #eff6ff;
@@ -277,11 +336,12 @@
 
     footer {
       text-align: center;
-      padding: 24px;
+      padding: 28px;
       color: var(--text-muted);
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       border-top: 1px solid var(--border);
       margin-top: 40px;
+      background: #ffffff;
     }
   </style>
 </head>
@@ -289,7 +349,7 @@
 
 <header>
   <div class="header-content">
-    <div style="font-size: 0.88rem; color: #a7f3d0; margin-bottom: 6px; font-weight: 600; letter-spacing: 0.02em;">Developed by Subramanian Mathur Seetharaman</div>
+    <div class="author-pill">Developed by Subramanian Mathur Seetharaman</div>
     <span class="badge badge-light">Commercial Credit Risk Modelling &amp; Monitoring</span>
     <h1>Commercial Credit Scorecard &amp; Out-of-Time Crisis Monitoring</h1>
     <p>
@@ -301,14 +361,51 @@
 </header>
 
 <div class="container">
-  <!-- Tabs -->
+
+  <!-- Plain-English User Navigation Guide -->
+  <div class="guidance-box">
+    <div class="guidance-title">
+      <span>💡</span> How to Use &amp; Navigate This Platform (What Each Tab Shows You)
+    </div>
+    <div style="font-size: 0.88rem; color: #475569;">
+      This platform demonstrates how commercial banks (like Lloyds BCB/CIB) evaluate business loans and monitor model stability over time:
+    </div>
+    <div class="guidance-steps">
+      <div class="step-card">
+        <strong>1. Loan Decision Checker</strong>
+        Change loan details (term, amount, industry) on the left to see the bank's automated decision (Approve, Refer, Decline) and credit score.
+      </div>
+      <div class="step-card">
+        <strong>2. Scorecard Explainability</strong>
+        See the exact points awarded or deducted for each factor, satisfying PRA adverse action rules so customers know why they were scored.
+      </div>
+      <div class="step-card">
+        <strong>3. Model Performance</strong>
+        View the scorecard's discrimination accuracy (AUC 0.79 / Gini 0.58) benchmarked against a modern Gradient Boosting challenger.
+      </div>
+      <div class="step-card">
+        <strong>4. Crisis Monitoring (PSI / CSI)</strong>
+        See how the model held up over 10 years and detected the 2007–2008 Financial Crisis, triggering Red alerts as defaults jumped to 37%.
+      </div>
+      <div class="step-card">
+        <strong>5. Portfolio Segments</strong>
+        Compare real commercial default rates across 11 industries (Restaurants, Retail, Tech, Healthcare) before and during the crisis.
+      </div>
+      <div class="step-card">
+        <strong>6. UK Macro Context</strong>
+        Examine official UK company insolvency statistics (2000–2024) showing the parallel corporate liquidation surge during economic downturns.
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Tabs (Non-truncating pills) -->
   <div class="nav-tabs" role="tablist">
-    <button class="tab-btn active" onclick="showTab('checker')">🎯 Risk Checker</button>
-    <button class="tab-btn" onclick="showTab('explain')">🔍 Scorecard Explainability</button>
-    <button class="tab-btn" onclick="showTab('performance')">📈 Model Performance & Comparison</button>
-    <button class="tab-btn" onclick="showTab('monitoring')">⚠️ Out-of-Time Monitoring (PSI / CSI)</button>
-    <button class="tab-btn" onclick="showTab('portfolio')">🏢 Portfolio Segments</button>
-    <button class="tab-btn" onclick="showTab('uk')">🇬🇧 UK Macro Context & Governance</button>
+    <button class="tab-btn active" id="tabBtn-checker" onclick="switchTab('checker', this)">🎯 1. Loan Decision Checker</button>
+    <button class="tab-btn" id="tabBtn-explain" onclick="switchTab('explain', this)">🔍 2. Scorecard Explainability</button>
+    <button class="tab-btn" id="tabBtn-performance" onclick="switchTab('performance', this)">📈 3. Model Performance (AUC / Gini)</button>
+    <button class="tab-btn" id="tabBtn-monitoring" onclick="switchTab('monitoring', this)">⚠️ 4. Crisis Monitoring (PSI / CSI)</button>
+    <button class="tab-btn" id="tabBtn-portfolio" onclick="switchTab('portfolio', this)">🏢 5. Portfolio Segments &amp; Sectors</button>
+    <button class="tab-btn" id="tabBtn-uk" onclick="switchTab('uk', this)">🇬🇧 6. UK Macro Context &amp; Governance</button>
   </div>
 
   <!-- TAB 1: RISK CHECKER -->
@@ -316,37 +413,40 @@
     <div class="grid-2">
       <!-- Form Input -->
       <div class="card">
-        <div class="card-title">Business Loan Application Details</div>
+        <div class="card-title">Commercial Loan Application Details</div>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;">
+          Select parameters below to test an application through the bank's empirical scorecard:
+        </p>
         <form id="loanForm" onchange="scoreLoan()">
           <div class="form-group">
-            <label class="form-label">Loan Term (Duration)</label>
+            <label class="form-label">Loan Term (Amortisation Duration)</label>
             <select class="form-select" id="term_band">
-              <option value="Short (<36m)">Short (<36 months - Working capital / Bridge)</option>
+              <option value="Short (<36m)">Short (&lt;36 months - Working capital / Bridge)</option>
               <option value="Medium (36-60m)">Medium (36–60 months - Equipment / Vehicles)</option>
               <option value="Long (61-120m)" selected>Long (61–120 months - Expansion term loan)</option>
-              <option value="Real Estate / Extended (>120m)">Real Estate / Extended (>120 months)</option>
+              <option value="Real Estate / Extended (>120m)">Real Estate / Extended (&gt;120 months)</option>
             </select>
           </div>
 
           <div class="form-group">
             <label class="form-label">Gross Facility Amount</label>
             <select class="form-select" id="loan_amt_band">
-              <option value="<$25k">Micro (<$25,000)</option>
+              <option value="<$25k">Micro (&lt;$25,000)</option>
               <option value="$25k-$50k">$25,000 – $50,000</option>
               <option value="$50k-$100k" selected>$50,000 – $100,000</option>
               <option value="$100k-$250k">$100,000 – $250,000</option>
               <option value="$250k-$500k">$250,000 – $500,000</option>
-              <option value=">$500k">Large Commercial (>$500,000)</option>
+              <option value=">$500k">Large Commercial (&gt;$500,000)</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label class="form-label">SBA / Scheme Guarantee Coverage</label>
+            <label class="form-label">Government / Scheme Guarantee Coverage</label>
             <select class="form-select" id="guar_band">
-              <option value="Low (<=50%)">Low Guarantee (<=50% - High bank risk)</option>
+              <option value="Low (<=50%)">Low Guarantee (&le;50% - High bank risk exposure)</option>
               <option value="Moderate (51-74%)">Moderate (51%–74%)</option>
               <option value="Standard (75-80%)" selected>Standard Scheme Guarantee (75%–80%)</option>
-              <option value="High (>80%)">High Guarantee (>80% - Government backed)</option>
+              <option value="High (>80%)">High Guarantee (&gt;80% - Government backed)</option>
             </select>
           </div>
 
@@ -359,7 +459,7 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label">Origination / Delivery Method</label>
+            <label class="form-label">Delivery Channel / Program</label>
             <select class="form-select" id="delivery_method">
               <option value="Preferred Lender (PLP)" selected>Preferred Lender Program (PLP)</option>
               <option value="SBA Express">Express Scheme</option>
@@ -371,27 +471,27 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label">Industry Sector (NAICS)</label>
+            <label class="form-label">Industry Sector</label>
             <select class="form-select" id="industry">
-              <option value="Accommodation & Food Services">Accommodation & Food Services (Restaurants, Bars, Hotels)</option>
+              <option value="Accommodation & Food Services">Accommodation &amp; Food Services (Restaurants, Bars, Hotels)</option>
               <option value="Retail Trade (Motor, Furniture, Electronics, Food)" selected>Retail Trade</option>
-              <option value="Construction">Construction & Contracting</option>
+              <option value="Construction">Construction &amp; Contracting</option>
               <option value="Manufacturing (Metal, Machinery, Electronics)">Manufacturing (Machinery, Metal, Electronics)</option>
               <option value="Manufacturing (Food, Textiles, Apparel)">Manufacturing (Food, Textiles, Goods)</option>
-              <option value="Professional, Scientific & Technical Services">Professional, Scientific & Technical</option>
-              <option value="Health Care & Social Assistance">Healthcare & Social Services</option>
-              <option value="Transportation & Warehousing">Transportation & Logistics</option>
+              <option value="Professional, Scientific & Technical Services">Professional, Scientific &amp; Technical</option>
+              <option value="Health Care & Social Assistance">Healthcare &amp; Social Assistance</option>
+              <option value="Transportation & Warehousing">Transportation &amp; Logistics</option>
               <option value="Wholesale Trade">Wholesale Trade</option>
               <option value="Other Services (Repair, Personal, Laundry)">Other Personal Services</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label class="form-label">Business Operating Track Record</label>
+            <label class="form-label">Operating Track Record</label>
             <select class="form-select" id="business_age">
               <option value="Established (5+ Years)" selected>Established (5+ Years trading)</option>
               <option value="Young (1-4 Years)">Young (1–4 Years trading)</option>
-              <option value="New (<1 Year)">New (<1 Year trading)</option>
+              <option value="New (<1 Year)">New (&lt;1 Year trading)</option>
               <option value="Startup">Startup (Loan funds launch)</option>
             </select>
           </div>
@@ -406,15 +506,15 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label">Lending Relationship</label>
+            <label class="form-label">Lender Relationship</label>
             <select class="form-select" id="same_state_bank">
               <option value="Local Bank (Same State)" selected>Local Relationship Bank (Same State)</option>
-              <option value="Out-of-State Bank">Out-of-State / National Remote Lender</option>
+              <option value="Out-of-State Bank">Out-of-State / Remote Lender</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label class="form-label">Project Geographic Region</label>
+            <label class="form-label">Geographic Region</label>
             <select class="form-select" id="region">
               <option value="Midwest">Midwest</option>
               <option value="Northeast">Northeast</option>
@@ -430,7 +530,7 @@
               <option value="1-2 Jobs">1–2 Jobs</option>
               <option value="3-5 Jobs" selected>3–5 Jobs</option>
               <option value="6-10 Jobs">6–10 Jobs</option>
-              <option value=">10 Jobs">>10 Jobs</option>
+              <option value=">10 Jobs">&gt;10 Jobs</option>
             </select>
           </div>
         </form>
@@ -439,9 +539,9 @@
       <!-- Decision & Output -->
       <div>
         <div class="card">
-          <div class="card-title">Credit Risk Decision & Score</div>
+          <div class="card-title">Credit Risk Decision &amp; Score</div>
           <div id="decisionHero" class="decision-hero hero-approve">
-            <div id="riskBandBadge" class="badge badge-green">Low Risk | Prime Band</div>
+            <div id="riskBandBadge" class="badge badge-green">Band 1 | Prime (Low Risk)</div>
             <div id="scoreDisplay" class="score-dial">612</div>
             <div id="decisionText" style="font-weight:700; font-size:1.15rem;">AUTO-APPROVE FACILITY</div>
             <div id="decisionSub" style="font-size:0.88rem; margin-top:4px;">Application meets credit policy thresholds for automated sign-off.</div>
@@ -453,7 +553,7 @@
               <div id="pdDisplay" class="metric-value">6.8%</div>
             </div>
             <div class="metric-box">
-              <div class="metric-label">Benchmark Default</div>
+              <div class="metric-label">Portfolio Benchmark</div>
               <div class="metric-value" style="color:var(--text-muted);">15.7%</div>
             </div>
             <div class="metric-box">
@@ -464,7 +564,7 @@
 
           <div class="info-callout" style="margin-top:20px;">
             <strong>Underwriting Guidance:</strong>
-            Scores above 565 indicate acceptable risk for standard pricing. Facilities scoring between 540 and 564 require secondary review by a commercial underwriter. Scores below 540 fall into elevated risk bands requiring enhanced security or decline.
+            Scores above 570 represent Prime risk (auto-approve). Scores from 555 to 569 represent Moderate risk (approve with standard covenants). Scores between 535 and 554 require referral to an underwriter. Scores below 535 represent elevated default probability (&gt;25%) and are declined by policy.
           </div>
         </div>
 
@@ -517,7 +617,7 @@
   <div id="pane-explain" class="tab-pane">
     <div class="card">
       <div class="card-title">
-        Points Breakdown & Explainability (Current Application)
+        Points Breakdown &amp; Explainability (Current Application)
         <span id="totalPointsBadge" class="badge badge-green">Total Score: 612</span>
       </div>
       <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:16px;">
@@ -564,12 +664,18 @@
       </div>
     </div>
 
+    <!-- Visual Decile Calibration Chart -->
     <div class="card">
-      <div class="card-title">Score Decile Calibration (Test Sample - 74,957 loans)</div>
-      <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:16px;">
-        Deciles ranked from Lowest Risk (Decile 1) to Highest Risk (Decile 10). Demonstrates monotonic risk ordering and tight calibration between predicted PD and observed default rates.
+      <div class="card-title">Score Decile Calibration: Predicted PD vs Actual Default Rate</div>
+      <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:12px;">
+        Visual proof that the scorecard correctly orders risk: Decile 1 (safest borrowers) has only a 3.5% default rate, while Decile 10 (highest risk) reaches 59.9%.
       </p>
-      <div class="table-container">
+      <div class="chart-box">
+        <svg viewBox="0 0 800 240" id="decileSvg">
+          <!-- Rendered via JS -->
+        </svg>
+      </div>
+      <div class="table-container" style="margin-top:16px;">
         <table>
           <thead>
             <tr>
@@ -606,16 +712,16 @@
               <td><strong>Discrimination (Gini / AUC)</strong></td>
               <td>Gini = 0.5833 (AUC = 0.7916)</td>
               <td>Gini = 0.6864 (AUC = 0.8432)</td>
-              <td>Gradient boosting captures complex multi-variable interactions for +0.10 Gini lift.</td>
+              <td>Gradient boosting captures multi-variable interactions for +0.10 Gini lift.</td>
             </tr>
             <tr>
-              <td><strong>Regulatory Transparency & Explainability</strong></td>
+              <td><strong>Regulatory Transparency &amp; Explainability</strong></td>
               <td><span class="badge badge-green">100% Transparent</span></td>
-              <td><span class="badge badge-amber">Opaque / Complex Ensemble</span></td>
-              <td>Scorecard assigns discrete points to each bin, enabling immediate customer adverse action explanations.</td>
+              <td><span class="badge badge-amber">Complex Ensemble</span></td>
+              <td>Scorecard assigns discrete integer points, enabling immediate customer adverse action explanations.</td>
             </tr>
             <tr>
-              <td><strong>Operational Stability & Monitoring</strong></td>
+              <td><strong>Operational Stability &amp; Monitoring</strong></td>
               <td><span class="badge badge-green">Simple PSI / CSI Tracking</span></td>
               <td><span class="badge badge-amber">Complex Feature Attribution</span></td>
               <td>Characteristic Stability Index (CSI) can be directly computed for every scorecard bin.</td>
@@ -636,14 +742,24 @@
   <div id="pane-monitoring" class="tab-pane">
     <div class="card">
       <div class="card-title">
-        Out-of-Time Model Monitoring & Financial Crisis Stress Performance (FY2000–FY2009)
+        Out-of-Time Model Monitoring &amp; Financial Crisis Stress Performance (FY2000–FY2009)
       </div>
       <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:16px;">
         Tracking the model across 604,786 commercial loans. The baseline is established on the Development cohort (FY2000–FY2004). 
         The Out-of-Time (OOT) cohorts (FY2005–FY2009) track the portfolio directly through the 2007–2008 Great Financial Crisis.
       </p>
 
-      <div class="table-container">
+      <!-- Visual PSI Crisis Drift Chart -->
+      <div class="chart-box">
+        <div style="font-weight:700; font-size:0.95rem; margin-bottom:8px; color:var(--text);">
+          Population Stability Index (PSI) by Approval Cohort (Green &lt;0.10, Amber 0.10-0.25, Red &gt;0.25)
+        </div>
+        <svg viewBox="0 0 800 200" id="psiChartSvg">
+          <!-- Rendered via JS -->
+        </svg>
+      </div>
+
+      <div class="table-container" style="margin-top:20px;">
         <table>
           <thead>
             <tr>
@@ -691,9 +807,9 @@
   <!-- TAB 5: PORTFOLIO SEGMENTS -->
   <div id="pane-portfolio" class="tab-pane">
     <div class="card">
-      <div class="card-title">Commercial Default Rates by Industry Sector</div>
+      <div class="card-title">Commercial Default Rates by Industry Sector (604,786 Loans)</div>
       <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:16px;">
-        Comparison of default rates between the pre-crisis baseline (FY2000–2004) and peak financial crisis (FY2006–2008).
+        Comparison of commercial default rates between the pre-crisis baseline (FY2000–2004) and peak financial crisis (FY2006–2008) across all major industry sectors.
       </p>
       <div class="table-container">
         <table>
@@ -716,14 +832,14 @@
 
     <div class="grid-2">
       <div class="card">
-        <div class="card-title">Default Rate by Business Age</div>
+        <div class="card-title">Default Rate by Business Operating Age</div>
         <div class="table-container">
           <table>
             <thead>
               <tr>
                 <th>Business Age</th>
-                <th>Loans</th>
-                <th>Baseline</th>
+                <th>Total Loans</th>
+                <th>Baseline (00-04)</th>
                 <th>Crisis (06-08)</th>
                 <th>Avg Score</th>
               </tr>
@@ -734,14 +850,14 @@
       </div>
 
       <div class="card">
-        <div class="card-title">Default Rate by Loan Facility Size</div>
+        <div class="card-title">Default Rate by Facility Size</div>
         <div class="table-container">
           <table>
             <thead>
               <tr>
                 <th>Loan Amount Band</th>
-                <th>Loans</th>
-                <th>Baseline</th>
+                <th>Total Loans</th>
+                <th>Baseline (00-04)</th>
                 <th>Crisis (06-08)</th>
                 <th>Avg Score</th>
               </tr>
@@ -758,10 +874,21 @@
     <div class="card">
       <div class="card-title">🇬🇧 UK Corporate Insolvency Context (The Insolvency Service Official Statistics)</div>
       <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:16px;">
-        Official company insolvency statistics in England & Wales from 2000 to 2024, published under the Open Government Licence v3.0. 
+        Official company insolvency statistics in England &amp; Wales from 2000 to 2024, published under the Open Government Licence v3.0. 
         Demonstrates the parallel surge in corporate insolvencies during the 2008–2009 recession and recent macroeconomic pressures.
       </p>
-      <div class="table-container">
+
+      <!-- Visual UK Insolvency Chart -->
+      <div class="chart-box">
+        <div style="font-weight:700; font-size:0.95rem; margin-bottom:8px; color:var(--text);">
+          UK Annual Company Insolvencies in England &amp; Wales (2000–2024)
+        </div>
+        <svg viewBox="0 0 800 200" id="ukChartSvg">
+          <!-- Rendered via JS -->
+        </svg>
+      </div>
+
+      <div class="table-container" style="margin-top:16px;">
         <table>
           <thead>
             <tr>
@@ -781,10 +908,10 @@
     </div>
 
     <div class="card">
-      <div class="card-title">Data Governance, Provenance & Validation</div>
+      <div class="card-title">Data Governance, Provenance &amp; Validation</div>
       <ul style="font-size:0.9rem; color:var(--text-muted); line-height:1.7; padding-left:20px;">
         <li><strong>Commercial Loan Dataset:</strong> U.S. Small Business Administration (SBA) 7(a) FOIA Loan Program (data.sba.gov), containing 604,786 closed business loan facilities originated FY2000–FY2009.</li>
-        <li><strong>UK Macroeconomic Dataset:</strong> The Insolvency Service (GOV.UK) long-run company insolvency statistics covering England & Wales (2000–2024).</li>
+        <li><strong>UK Macroeconomic Dataset:</strong> The Insolvency Service (GOV.UK) long-run company insolvency statistics covering England &amp; Wales (2000–2024).</li>
         <li><strong>Information Governance:</strong> All data is public domain or licensed under Open Government Licence v3.0. All customer names and address identifiers were excluded. Post-origination target leakage fields (such as liquidation collateral flags) were strictly filtered out.</li>
         <li><strong>Automated Reconciliation:</strong> All model coefficients, scorecard points, PSI indices, and decile distributions are validated against independent Python calculation scripts with zero manual editing.</li>
       </ul>
@@ -793,18 +920,27 @@
 </div>
 
 <footer>
-  Commercial Credit Risk Modelling &amp; Monitoring Platform &bull; Developed by <a href="https://github.com/Subramanian-MS" target="_blank" style="color:var(--primary); font-weight:600; text-decoration:none;">Subramanian Mathur Seetharaman</a> &bull; Built with Python (pandas, scikit-learn) &bull; Open Data Governance
+  Commercial Credit Risk Modelling &amp; Monitoring Platform &bull; Developed by <a href="https://github.com/Subramanian-MS" target="_blank" style="color:var(--primary); font-weight:700; text-decoration:none;">Subramanian Mathur Seetharaman</a> &bull; Built with Python (pandas, scikit-learn) &bull; Open Data Governance
 </footer>
 
 <script>
 // Embedded Data Payload
 const DATA = {"model":{"scaling":{"base_score":600,"base_odds":50.0,"pdo":20.0,"factor":28.8539,"offset":487.1229,"intercept":-1.6765},"information_values":{"term_band":0.9989,"loan_amt_band":0.017,"guar_band":0.007,"delivery_method":0.0523,"is_revolver":0.021,"same_state_bank":0.0195,"business_age":0.0078,"business_type":0.0052,"industry":0.0469,"region":0.0422,"jobs_band":0.0016},"feature_coefficients":{"term_band":-1.0689,"loan_amt_band":1.5621,"guar_band":1.1523,"delivery_method":-0.9168,"is_revolver":-1.001,"same_state_bank":-1.2106,"business_age":-1.6806,"business_type":-1.424,"industry":-1.1689,"region":-1.3703,"jobs_band":-0.2886},"scorecard_points":{"term_band":{"Long (61-120m)":72,"Medium (36-60m)":37,"Real Estate / Extended (>120m)":73,"Short (<36m)":-12},"loan_amt_band":{"$100k-$250k":45,"$250k-$500k":40,"$25k-$50k":55,"$50k-$100k":44,"<$25k":56,">$500k":45},"guar_band":{"High (>80%)":53,"Low (<=50%)":49,"Moderate (51-74%)":47,"Standard (75-80%)":46},"delivery_method":{"Community Express":21,"Low Documentation":50,"Other Specialised":51,"Preferred Lender (PLP)":53,"SBA Express":49,"Standard 7(a)":49},"is_revolver":{"Revolving Line":40,"Term Loan":51},"same_state_bank":{"Local Bank (Same State)":57,"Out-of-State Bank":46},"business_age":{"Established (5+ Years)":33,"New (<1 Year)":43,"Startup":57,"Young (1-4 Years)":51},"business_type":{"Corporation":49,"Partnership":62,"Sole Proprietorship":46},"industry":{"Accommodation & Food Services":45,"Administrative & Support & Waste Management":53,"Agriculture, Forestry & Fishing":40,"Arts, Entertainment & Recreation":43,"Construction":49,"Educational Services":53,"Finance & Insurance":58,"Health Care & Social Assistance":69,"Information & Media":45,"Management of Companies":90,"Manufacturing (Food, Textiles, Apparel)":45,"Manufacturing (Metal, Machinery, Electronics)":54,"Manufacturing (Wood, Paper, Chemical, Plastics)":46,"Mining, Quarrying & Oil Extraction":64,"Other / Unclassified":47,"Other Services (Repair, Personal, Laundry)":49,"Postal, Couriers & Warehousing":44,"Professional, Scientific & Technical Services":59,"Public Administration":17,"Real Estate, Rental & Leasing":48,"Retail Trade (General, Clothing, Sporting, Online)":36,"Retail Trade (Motor, Furniture, Electronics, Food)":44,"Transportation & Warehousing":47,"Utilities":65,"Wholesale Trade":45},"region":{"Midwest":45,"Northeast":57,"Other":61,"South":38,"West":55},"jobs_band":{"0 Jobs":49,"1-2 Jobs":49,"3-5 Jobs":48,"6-10 Jobs":48,">10 Jobs":49}},"woe_tables":{"term_band":[{"term_band":"Long (61-120m)","count":85863,"bads":6839,"goods":79024,"distr_good":0.5362464883351655,"distr_bad":0.2484109977118367,"woe":0.7695092983801618,"iv_component":0.22149208643846738,"default_rate":0.0797,"pct_population":0.4909},{"term_band":"Medium (36-60m)","count":34250,"bads":7283,"goods":26967,"distr_good":0.18299675637528331,"distr_bad":0.26453710093342536,"woe":-0.36851308168188646,"iv_component":0.030048683654523765,"default_rate":0.2126,"pct_population":0.1958},{"term_band":"Real Estate / Extended (>120m)","count":36498,"bads":2893,"goods":33605,"distr_good":0.22804106781754271,"distr_bad":0.10509207133258272,"woe":0.7746888989753002,"iv_component":0.09524722271705172,"default_rate":0.0793,"pct_population":0.2087},{"term_band":"Short (<36m)","count":18286,"bads":10517,"goods":7769,"distr_good":0.05272247329777561,"distr_bad":0.3819961500744561,"woe":-1.980368727280355,"iv_component":0.6520832922051576,"default_rate":0.5751,"pct_population":0.1046}],"loan_amt_band":[{"loan_amt_band":"$100k-$250k","count":38353,"bads":5609,"goods":32744,"distr_good":0.22219847183203725,"distr_bad":0.20373733338176006,"woe":0.08673941700129147,"iv_component":0.0016013083863571692,"default_rate":0.1462,"pct_population":0.2193},{"loan_amt_band":"$250k-$500k","count":19923,"bads":2668,"goods":17255,"distr_good":0.11709281652484291,"distr_bad":0.09692005956488578,"woe":0.1890804134038925,"iv_component":0.0038142732254849436,"default_rate":0.1339,"pct_population":0.1139},{"loan_amt_band":"$25k-$50k","count":32921,"bads":5815,"goods":27106,"distr_good":0.18393998615691542,"distr_bad":0.21121926415574038,"woe":-0.13828721831523327,"iv_component":0.003772375472105447,"default_rate":0.1766,"pct_population":0.1882},{"loan_amt_band":"$50k-$100k","count":29779,"bads":4326,"goods":25453,"distr_good":0.17272301616383698,"distr_bad":0.15713870627973706,"woe":0.09456035399172888,"iv_component":0.001473657859357288,"default_rate":0.1453,"pct_population":0.1703},{"loan_amt_band":"<$25k","count":35583,"bads":6415,"goods":29168,"distr_good":0.19793235888875318,"distr_bad":0.23301129553626557,"woe":-0.16316158053251514,"iv_component":0.005723534746808088,"default_rate":0.1803,"pct_population":0.2035},{"loan_amt_band":">$500k","count":18338,"bads":2699,"goods":15639,"distr_good":0.10612692208514854,"distr_bad":0.09804598118621291,"woe":0.07919919157800018,"iv_component":0.0006400039863852998,"default_rate":0.1472,"pct_population":0.1049}],"guar_band":[{"guar_band":"High (>80%)","count":36964,"bads":6527,"goods":30437,"distr_good":0.2065435717872508,"distr_bad":0.2370791413939636,"woe":-0.1378826237908064,"iv_component":0.004210324456320364,"default_rate":0.1766,"pct_population":0.2113},{"guar_band":"Low (<=50%)","count":72843,"bads":11491,"goods":61352,"distr_good":0.41632737537830977,"distr_bad":0.41737188101550865,"woe":-0.002505714562395299,"iv_component":2.61723298563321e-06,"default_rate":0.1578,"pct_population":0.4165},{"guar_band":"Moderate (51-74%)","count":2407,"bads":366,"goods":2041,"distr_good":0.013853263303611417,"distr_bad":0.013311299168270802,"woe":0.03990758639045609,"iv_component":2.1628480551634408e-05,"default_rate":0.1521,"pct_population":0.0138},{"guar_band":"Standard (75-80%)","count":62683,"bads":9148,"goods":53535,"distr_good":0.36328257535659514,"distr_bad":0.3322739984745578,"woe":0.08922105078598566,"iv_component":0.0027666178127933945,"default_rate":0.1459,"pct_population":0.3584}],"delivery_method":[{"delivery_method":"Community Express","count":5241,"bads":1838,"goods":3403,"distr_good":0.02309555799845283,"distr_bad":0.06677441615515926,"woe":-1.0616797108957887,"iv_component":0.04637295750007025,"default_rate":0.3507,"pct_population":0.03},{"delivery_method":"Low Documentation","count":25811,"bads":3955,"goods":21856,"distr_good":0.14831440087944303,"distr_bad":0.1436639668761123,"woe":0.03185734161809983,"iv_component":0.00014815046471653478,"default_rate":0.1532,"pct_population":0.1476},{"delivery_method":"Other Specialised","count":5811,"bads":856,"goods":4955,"distr_good":0.03362715958905039,"distr_bad":0.031108124795699705,"woe":0.07786502904012049,"iv_component":0.00019614471733732491,"default_rate":0.1473,"pct_population":0.0332},{"delivery_method":"Preferred Lender (PLP)","count":44462,"bads":6147,"goods":38315,"distr_good":0.26000230718076084,"distr_bad":0.22327752151963098,"woe":0.1522750159059732,"iv_component":0.005592267320692005,"default_rate":0.1383,"pct_population":0.2542},{"delivery_method":"SBA Express","count":72287,"bads":11375,"goods":60912,"distr_good":0.41334161204076925,"distr_bad":0.4131587549486071,"woe":0.00044248521222491814,"iv_component":8.091155923219926e-08,"default_rate":0.1574,"pct_population":0.4133},{"delivery_method":"Standard 7(a)","count":21285,"bads":3361,"goods":17924,"distr_good":0.12163253396305797,"distr_bad":0.12208985580939237,"woe":-0.0037528138755727513,"iv_component":1.7162437705262933e-06,"default_rate":0.1579,"pct_population":0.1217}],"is_revolver":[{"is_revolver":"Revolving Line","count":31497,"bads":6298,"goods":25199,"distr_good":0.17099941641898403,"distr_bad":0.22876184941706315,"woe":-0.29102135980199295,"iv_component":0.016810101796572493,"default_rate":0.2,"pct_population":0.1801},{"is_revolver":"Term Loan","count":143400,"bads":21234,"goods":122166,"distr_good":0.829000583581016,"distr_bad":0.7712381505829369,"woe":0.07222364790318882,"iv_component":0.0041718136228848035,"default_rate":0.1481,"pct_population":0.8199}],"same_state_bank":[{"same_state_bank":"Local Bank (Same State)","count":52580,"bads":6826,"goods":45754,"distr_good":0.3104820650624975,"distr_bad":0.24793883703192532,"woe":0.2249440473550386,"iv_component":0.014068726847846002,"default_rate":0.1298,"pct_population":0.3006},{"same_state_bank":"Out-of-State Bank","count":122317,"bads":20706,"goods":101611,"distr_good":0.6895179349375026,"distr_bad":0.7520611629680747,"woe":-0.08682494596954095,"iv_component":0.005430312394515102,"default_rate":0.1693,"pct_population":0.6994}],"business_age":[{"business_age":"Established (5+ Years)","count":2962,"bads":603,"goods":2359,"distr_good":0.016011155897561174,"distr_bad":0.02191915156357825,"woe":-0.3140750324136121,"iv_component":0.0018555539303037937,"default_rate":0.2036,"pct_population":0.0169},{"business_age":"New (<1 Year)","count":43567,"bads":7600,"goods":35967,"distr_good":0.24406918827952173,"distr_bad":0.27605055751280283,"woe":-0.12313228471535415,"iv_component":0.003937939062019236,"default_rate":0.1744,"pct_population":0.2491},{"business_age":"Startup","count":397,"bads":54,"goods":343,"distr_good":0.0023309311510117665,"distr_bad":0.0019794428503977046,"woe":0.1634524069507375,"iv_component":5.745160875039281e-05,"default_rate":0.136,"pct_population":0.0023},{"business_age":"Young (1-4 Years)","count":127971,"bads":19275,"goods":108696,"distr_good":0.7375955104976725,"distr_bad":0.7000871681255221,"woe":0.05219073240408167,"iv_component":0.001957587859665579,"default_rate":0.1506,"pct_population":0.7317}],"business_type":[{"business_type":"Corporation","count":121050,"bads":18820,"goods":102230,"distr_good":0.6937183610873607,"distr_bad":0.6835615443286238,"woe":0.014749363360978696,"iv_component":0.0001498065809654887,"default_rate":0.1555,"pct_population":0.6921},{"business_type":"Partnership","count":6125,"bads":722,"goods":5403,"distr_good":0.036667209532728035,"distr_bad":0.026241237787382413,"woe":0.3345507477141649,"iv_component":0.003488016643052134,"default_rate":0.1179,"pct_population":0.035},{"business_type":"Sole Proprietorship","count":47722,"bads":7990,"goods":39732,"distr_good":0.2696178222927948,"distr_bad":0.2902153779101442,"woe":-0.07361784649665702,"iv_component":0.0015163476876443825,"default_rate":0.1674,"pct_population":0.2729}],"industry":[{"industry":"Accommodation & Food Services","count":20758,"bads":3607,"goods":17151,"distr_good":0.1163870906450606,"distr_bad":0.1310245886754077,"woe":-0.11846338136427062,"iv_component":0.0017340075113877684,"default_rate":0.1738,"pct_population":0.1187},{"industry":"Administrative & Support & Waste Management","count":8316,"bads":1172,"goods":7144,"distr_good":0.0484813321933146,"distr_bad":0.042585261322776305,"woe":0.12967060554612223,"iv_component":0.0007645470801255531,"default_rate":0.1409,"pct_population":0.0475},{"industry":"Agriculture, Forestry & Fishing","count":1541,"bads":300,"goods":1241,"distr_good":0.008424602689901334,"distr_bad":0.010914175716413031,"woe":-0.25890615206950907,"iv_component":0.0006445657725901855,"default_rate":0.1947,"pct_population":0.0088},{"industry":"Arts, Entertainment & Recreation","count":3330,"bads":598,"goods":2732,"distr_good":0.0185422689087035,"distr_bad":0.021737551302073874,"woe":-0.15898830798980232,"iv_component":0.0005080125412715619,"default_rate":0.1796,"pct_population":0.019},{"industry":"Construction","count":12045,"bads":1901,"goods":10144,"distr_good":0.06883880949472741,"distr_bad":0.0690625794501144,"woe":-0.003245364727678053,"iv_component":7.262151203270301e-07,"default_rate":0.1578,"pct_population":0.0689},{"industry":"Educational Services","count":1565,"bads":222,"goods":1343,"distr_good":0.00911675691814937,"distr_bad":0.008081211636944757,"woe":0.12057232340678285,"iv_component":0.0001248581005477704,"default_rate":0.1419,"pct_population":0.0089},{"industry":"Finance & Insurance","count":2210,"bads":271,"goods":1939,"distr_good":0.013161109075363381,"distr_bad":0.009860894199687647,"woe":0.2886893444635637,"iv_component":0.0009527368690477291,"default_rate":0.1226,"pct_population":0.0126},{"industry":"Health Care & Social Assistance","count":12544,"bads":1162,"goods":11382,"distr_good":0.07723966179444376,"distr_bad":0.04222206079976755,"woe":0.6039702267049577,"iv_component":0.021149588411418344,"default_rate":0.0926,"pct_population":0.0717},{"industry":"Information & Media","count":2604,"bads":448,"goods":2156,"distr_good":0.01463363326683224,"distr_bad":0.016289543456942578,"woe":-0.1072008684534211,"iv_component":0.0001775150104606978,"default_rate":0.172,"pct_population":0.0149},{"industry":"Management of Companies","count":47,"bads":2,"goods":45,"distr_good":0.0003087550724047609,"distr_bad":9.080013075218828e-05,"woe":1.2238875910402816,"iv_component":0.00026675234849449225,"default_rate":0.0426,"pct_population":0.0003},{"industry":"Manufacturing (Food, Textiles, Apparel)","count":2816,"bads":482,"goods":2334,"distr_good":0.015841510253382735,"distr_bad":0.01752442523517234,"woe":-0.10096190941051697,"iv_component":0.00016991030993704392,"default_rate":0.1712,"pct_population":0.0161},{"industry":"Manufacturing (Metal, Machinery, Electronics)","count":8694,"bads":1201,"goods":7493,"distr_good":0.05084958538604563,"distr_bad":0.043638542839501686,"woe":0.15293119886605921,"iv_component":0.0011027933817171257,"default_rate":0.1381,"pct_population":0.0497},{"industry":"Manufacturing (Wood, Paper, Chemical, Plastics)","count":4286,"bads":712,"goods":3574,"distr_good":0.024255934204633362,"distr_bad":0.02587803726437366,"woe":-0.06473332997836717,"iv_component":0.00010500413262508783,"default_rate":0.1661,"pct_population":0.0245},{"industry":"Mining, Quarrying & Oil Extraction","count":305,"bads":32,"goods":273,"distr_good":0.0018559233473121343,"distr_bad":0.0011804016997784476,"woe":0.45252752948387603,"iv_component":0.00030569214227129694,"default_rate":0.1049,"pct_population":0.0017},{"industry":"Other / Unclassified","count":11647,"bads":1902,"goods":9745,"distr_good":0.06613126501363951,"distr_bad":0.06909889950241528,"woe":-0.04389717378961356,"iv_component":0.00013027076689784082,"default_rate":0.1633,"pct_population":0.0666},{"industry":"Other Services (Repair, Personal, Laundry)","count":18136,"bads":2863,"goods":15273,"distr_good":0.10364330985437618,"distr_bad":0.10400246976355645,"woe":-0.0034593553311551683,"iv_component":1.2424617465599749e-06,"default_rate":0.1579,"pct_population":0.1037},{"industry":"Postal, Couriers & Warehousing","count":577,"bads":101,"goods":476,"distr_good":0.003233445978041068,"distr_bad":0.0036864853085388444,"woe":-0.13112507843005328,"iv_component":5.940481774341976e-05,"default_rate":0.175,"pct_population":0.0033},{"industry":"Professional, Scientific & Technical Services","count":14458,"bads":1742,"goods":12716,"distr_good":0.08629195336780533,"distr_bad":0.06328769113427524,"woe":0.3100454961215647,"iv_component":0.007132367897105412,"default_rate":0.1205,"pct_population":0.0827},{"industry":"Public Administration","count":13,"bads":4,"goods":9,"distr_good":6.446534478780723e-05,"distr_bad":0.00016344023535393891,"woe":-0.930319601212247,"iv_component":9.207828072150941e-05,"default_rate":0.3077,"pct_population":0.0001},{"industry":"Real Estate, Rental & Leasing","count":2740,"bads":443,"goods":2297,"distr_good":0.015590434699998643,"distr_bad":0.0161079431954382,"woe":-0.03265495056226006,"iv_component":1.689921433412833e-05,"default_rate":0.1617,"pct_population":0.0157},{"industry":"Retail Trade (General, Clothing, Sporting, Online)","count":9573,"bads":2032,"goods":7541,"distr_good":0.05117530502286823,"distr_bad":0.07382050630152907,"woe":-0.3663794642561267,"iv_component":0.008296736712447914,"default_rate":0.2123,"pct_population":0.0547},{"industry":"Retail Trade (Motor, Furniture, Electronics, Food)","count":22119,"bads":3882,"goods":18237,"distr_good":0.12375649742817203,"distr_bad":0.14101260305814842,"woe":-0.13053336523426928,"iv_component":0.0022524975387188378,"default_rate":0.1755,"pct_population":0.1265},{"industry":"Transportation & Warehousing","count":3991,"bads":651,"goods":3340,"distr_good":0.02266805097512316,"distr_bad":0.023662514074020268,"woe":-0.04293562424183598,"iv_component":4.269789393661795e-05,"default_rate":0.1631,"pct_population":0.0228},{"industry":"Utilities","count":160,"bads":16,"goods":144,"distr_good":0.0009805518233513837,"distr_bad":0.0005992808629644426,"woe":0.492385123603484,"iv_component":0.00018773214895654303,"default_rate":0.1,"pct_population":0.0009},{"industry":"Wholesale Trade","count":10422,"bads":1786,"goods":8636,"distr_good":0.05860578423788391,"distr_bad":0.06488577343551374,"woe":-0.10179499337259343,"iv_component":0.0006392714587526875,"default_rate":0.1714,"pct_population":0.0596}],"region":[{"region":"Midwest","count":32208,"bads":5463,"goods":26745,"distr_good":0.18149030305497876,"distr_bad":0.19843460574583227,"woe":-0.08925737817947539,"iv_component":0.001512404033265014,"default_rate":0.1696,"pct_population":0.1842},{"region":"Northeast","count":43814,"bads":5718,"goods":38096,"distr_good":0.2585162113377577,"distr_bad":0.20769621908255548,"woe":0.21888187811428128,"iv_component":0.011123575350571893,"default_rate":0.1305,"pct_population":0.2505},{"region":"Other","count":2671,"bads":323,"goods":2348,"distr_good":0.015936511814122662,"distr_bad":0.011749536919333163,"woe":0.30479898848362663,"iv_component":0.0012761857127381784,"default_rate":0.1209,"pct_population":0.0153},{"region":"South","count":46974,"bads":9248,"goods":37726,"distr_good":0.25600545580391676,"distr_bad":0.33590600370464535,"woe":-0.27163261396007543,"iv_component":0.021703594683117125,"default_rate":0.1969,"pct_population":0.2686},{"region":"West","count":49230,"bads":6780,"goods":42450,"distr_good":0.2880616967278748,"distr_bad":0.24626811462608506,"woe":0.15675384266267375,"iv_component":0.006551304593093487,"default_rate":0.1377,"pct_population":0.2815}],"jobs_band":[{"jobs_band":"0 Jobs","count":58107,"bads":9077,"goods":49030,"distr_good":0.33271243027564024,"distr_bad":0.32969527476119564,"woe":0.009109726100380806,"iv_component":2.7485460338843774e-05,"default_rate":0.1562,"pct_population":0.3322},{"jobs_band":"1-2 Jobs","count":27649,"bads":4390,"goods":23259,"distr_good":0.15783491443073708,"distr_bad":0.15946318962699307,"woe":-0.010263468131604557,"iv_component":1.671175058625557e-05,"default_rate":0.1588,"pct_population":0.1581},{"jobs_band":"3-5 Jobs","count":32826,"bads":5411,"goods":27415,"distr_good":0.18603680631896097,"distr_bad":0.19654596302618677,"woe":-0.05495177491506267,"iv_component":0.0005774968139225932,"default_rate":0.1648,"pct_population":0.1877},{"jobs_band":"6-10 Jobs","count":26553,"bads":4259,"goods":22294,"distr_good":0.1512865925654493,"distr_bad":0.1547052627755784,"woe":-0.022345774268303812,"iv_component":7.639283281331948e-05,"default_rate":0.1604,"pct_population":0.1518},{"jobs_band":">10 Jobs","count":29762,"bads":4395,"goods":25367,"distr_good":0.17213943514786315,"distr_bad":0.15964478988849745,"woe":0.07535353381953647,"iv_component":0.0009415156741147239,"default_rate":0.1477,"pct_population":0.1702}]},"performance":{"scorecard":{"train":{"auc":0.7852,"gini":0.5704,"ks":0.4452},"test":{"auc":0.7916,"gini":0.5833,"ks":0.4554},"oot_overall":{"auc":0.7414,"gini":0.4828,"ks":0.3944}},"challenger_gradient_boosting":{"test":{"auc":0.8432,"gini":0.6864,"ks":0.5223},"oot_overall":{"auc":0.7827,"gini":0.5653,"ks":0.4385}}},"deciles":[{"decile":1,"count":7312,"min_score":576,"max_score":620,"avg_score":583,"avg_pred_pd":0.0353,"actual_default_rate":0.0347,"bads":254,"goods":7058,"bad_share":0.0215},{"decile":2,"count":7229,"min_score":569,"max_score":575,"avg_score":571,"avg_pred_pd":0.0504,"actual_default_rate":0.0436,"bads":315,"goods":6914,"bad_share":0.0267},{"decile":3,"count":6678,"min_score":564,"max_score":568,"avg_score":565,"avg_pred_pd":0.0611,"actual_default_rate":0.0583,"bads":389,"goods":6289,"bad_share":0.033},{"decile":4,"count":8019,"min_score":559,"max_score":563,"avg_score":561,"avg_pred_pd":0.0716,"actual_default_rate":0.0576,"bads":462,"goods":7557,"bad_share":0.0392},{"decile":5,"count":8088,"min_score":553,"max_score":558,"avg_score":555,"avg_pred_pd":0.0854,"actual_default_rate":0.0847,"bads":685,"goods":7403,"bad_share":0.0581},{"decile":6,"count":7147,"min_score":547,"max_score":552,"avg_score":549,"avg_pred_pd":0.1029,"actual_default_rate":0.1035,"bads":740,"goods":6407,"bad_share":0.0627},{"decile":7,"count":7128,"min_score":540,"max_score":546,"avg_score":542,"avg_pred_pd":0.1263,"actual_default_rate":0.1163,"bads":829,"goods":6299,"bad_share":0.0703},{"decile":8,"count":8135,"min_score":528,"max_score":539,"avg_score":534,"avg_pred_pd":0.1641,"actual_default_rate":0.1614,"bads":1313,"goods":6822,"bad_share":0.1113},{"decile":9,"count":7614,"min_score":497,"max_score":527,"avg_score":516,"avg_pred_pd":0.2704,"actual_default_rate":0.2959,"bads":2253,"goods":5361,"bad_share":0.1909},{"decile":10,"count":7607,"min_score":421,"max_score":496,"avg_score":474,"avg_pred_pd":0.5997,"actual_default_rate":0.5993,"bads":4559,"goods":3048,"bad_share":0.3864}]},"monitoring":{"baseline_definition":"Approval FY2000 - FY2004 (249,854 commercial loans)","oot_definition":"Approval FY2005 - FY2009 (354,932 commercial loans)","score_bins":["<480","480-499","500-519","520-534","535-544","545-554","555-564","565-574","575-589","590+"],"base_distribution":{"<480":0.0612,"480-499":0.044,"500-519":0.054,"520-534":0.0988,"535-544":0.1263,"545-554":0.1574,"555-564":0.2015,"565-574":0.1552,"575-589":0.087,"590+":0.0147},"psi_by_year":[{"fy":2000,"n_loans":37532,"psi":0.0278,"rag":"GREEN","is_dev":true,"score_distribution":{"<480":0.0584,"480-499":0.0374,"500-519":0.0577,"520-534":0.1012,"535-544":0.1518,"545-554":0.1812,"555-564":0.2081,"565-574":0.1379,"575-589":0.0591,"590+":0.0072}},{"fy":2001,"n_loans":37264,"psi":0.0045,"rag":"GREEN","is_dev":true,"score_distribution":{"<480":0.0531,"480-499":0.0405,"500-519":0.0502,"520-534":0.0963,"535-544":0.1358,"545-554":0.1559,"555-564":0.1968,"565-574":0.1559,"575-589":0.0973,"590+":0.0182}},{"fy":2002,"n_loans":45062,"psi":0.0127,"rag":"GREEN","is_dev":true,"score_distribution":{"<480":0.0485,"480-499":0.0386,"500-519":0.0447,"520-534":0.0882,"535-544":0.1181,"545-554":0.1572,"555-564":0.213,"565-574":0.1711,"575-589":0.1018,"590+":0.0189}},{"fy":2003,"n_loans":58969,"psi":0.0034,"rag":"GREEN","is_dev":true,"score_distribution":{"<480":0.0607,"480-499":0.0447,"500-519":0.0528,"520-534":0.0952,"535-544":0.1151,"545-554":0.1497,"555-564":0.2036,"565-574":0.1656,"575-589":0.0961,"590+":0.0163}},{"fy":2004,"n_loans":71027,"psi":0.0085,"rag":"GREEN","is_dev":true,"score_distribution":{"<480":0.0753,"480-499":0.052,"500-519":0.0611,"520-534":0.1085,"535-544":0.1222,"545-554":0.1521,"555-564":0.1915,"565-574":0.1451,"575-589":0.0793,"590+":0.0128}},{"fy":2005,"n_loans":84030,"psi":0.1136,"rag":"AMBER","is_dev":false,"score_distribution":{"<480":0.1133,"480-499":0.0566,"500-519":0.0855,"520-534":0.1376,"535-544":0.1313,"545-554":0.1522,"555-564":0.1571,"565-574":0.1036,"575-589":0.0537,"590+":0.0091}},{"fy":2006,"n_loans":86068,"psi":0.1973,"rag":"AMBER","is_dev":false,"score_distribution":{"<480":0.116,"480-499":0.062,"500-519":0.1068,"520-534":0.1473,"535-544":0.1426,"545-554":0.1489,"555-564":0.1389,"565-574":0.0858,"575-589":0.0446,"590+":0.0071}},{"fy":2007,"n_loans":87697,"psi":0.2049,"rag":"AMBER","is_dev":false,"score_distribution":{"<480":0.099,"480-499":0.0581,"500-519":0.1173,"520-534":0.1527,"535-544":0.1501,"545-554":0.1523,"555-564":0.1376,"565-574":0.0826,"575-589":0.0428,"590+":0.0076}},{"fy":2008,"n_loans":60960,"psi":0.1311,"rag":"AMBER","is_dev":false,"score_distribution":{"<480":0.0814,"480-499":0.0486,"500-519":0.1024,"520-534":0.15,"535-544":0.1529,"545-554":0.1621,"555-564":0.1449,"565-574":0.0949,"575-589":0.0525,"590+":0.0102}},{"fy":2009,"n_loans":36177,"psi":0.0576,"rag":"GREEN","is_dev":false,"score_distribution":{"<480":0.0576,"480-499":0.0358,"500-519":0.0849,"520-534":0.1378,"535-544":0.1428,"545-554":0.1714,"555-564":0.1609,"565-574":0.1133,"575-589":0.0756,"590+":0.0199}}],"gini_by_year":[{"fy":2000,"auc":0.7199,"gini":0.4399,"ks":0.3288,"rag":"AMBER","is_dev":true},{"fy":2001,"auc":0.7412,"gini":0.4823,"ks":0.3646,"rag":"AMBER","is_dev":true},{"fy":2002,"auc":0.783,"gini":0.5661,"ks":0.433,"rag":"GREEN","is_dev":true},{"fy":2003,"auc":0.8205,"gini":0.6409,"ks":0.5092,"rag":"GREEN","is_dev":true},{"fy":2004,"auc":0.8079,"gini":0.6157,"ks":0.493,"rag":"GREEN","is_dev":true},{"fy":2005,"auc":0.7867,"gini":0.5734,"ks":0.4792,"rag":"GREEN","is_dev":false},{"fy":2006,"auc":0.7571,"gini":0.5141,"ks":0.4303,"rag":"GREEN","is_dev":false},{"fy":2007,"auc":0.7189,"gini":0.4377,"ks":0.3637,"rag":"AMBER","is_dev":false},{"fy":2008,"auc":0.7016,"gini":0.4031,"ks":0.3226,"rag":"AMBER","is_dev":false},{"fy":2009,"auc":0.6928,"gini":0.3855,"ks":0.2984,"rag":"RED","is_dev":false}],"calibration_by_year":[{"fy":2000,"n_loans":37532,"observed_default_rate":0.148,"expected_default_rate":0.1559,"oe_ratio":0.95,"rag":"GREEN","is_dev":true},{"fy":2001,"n_loans":37264,"observed_default_rate":0.1461,"expected_default_rate":0.1484,"oe_ratio":0.985,"rag":"GREEN","is_dev":true},{"fy":2002,"n_loans":45062,"observed_default_rate":0.1348,"expected_default_rate":0.1408,"oe_ratio":0.957,"rag":"GREEN","is_dev":true},{"fy":2003,"n_loans":58969,"observed_default_rate":0.1543,"expected_default_rate":0.1535,"oe_ratio":1.005,"rag":"GREEN","is_dev":true},{"fy":2004,"n_loans":71027,"observed_default_rate":0.1853,"expected_default_rate":0.1708,"oe_ratio":1.085,"rag":"GREEN","is_dev":true},{"fy":2005,"n_loans":84030,"observed_default_rate":0.246,"expected_default_rate":0.2093,"oe_ratio":1.176,"rag":"GREEN","is_dev":false},{"fy":2006,"n_loans":86068,"observed_default_rate":0.3229,"expected_default_rate":0.2211,"oe_ratio":1.461,"rag":"AMBER","is_dev":false},{"fy":2007,"n_loans":87697,"observed_default_rate":0.3695,"expected_default_rate":0.2128,"oe_ratio":1.736,"rag":"RED","is_dev":false},{"fy":2008,"n_loans":60960,"observed_default_rate":0.3061,"expected_default_rate":0.1938,"oe_ratio":1.579,"rag":"RED","is_dev":false},{"fy":2009,"n_loans":36177,"observed_default_rate":0.149,"expected_default_rate":0.1657,"oe_ratio":0.9,"rag":"GREEN","is_dev":false}],"csi_by_feature":{"term_band":[{"fy":2000,"csi":0.0422,"rag":"GREEN"},{"fy":2001,"csi":0.0109,"rag":"GREEN"},{"fy":2002,"csi":0.0092,"rag":"GREEN"},{"fy":2003,"csi":0.0111,"rag":"GREEN"},{"fy":2004,"csi":0.0212,"rag":"GREEN"},{"fy":2005,"csi":0.0586,"rag":"GREEN"},{"fy":2006,"csi":0.0977,"rag":"GREEN"},{"fy":2007,"csi":0.1223,"rag":"AMBER"},{"fy":2008,"csi":0.0641,"rag":"GREEN"},{"fy":2009,"csi":0.0375,"rag":"GREEN"}],"loan_amt_band":[{"fy":2000,"csi":0.1155,"rag":"AMBER"},{"fy":2001,"csi":0.0706,"rag":"GREEN"},{"fy":2002,"csi":0.0274,"rag":"GREEN"},{"fy":2003,"csi":0.0396,"rag":"GREEN"},{"fy":2004,"csi":0.0525,"rag":"GREEN"},{"fy":2005,"csi":0.1078,"rag":"AMBER"},{"fy":2006,"csi":0.1908,"rag":"AMBER"},{"fy":2007,"csi":0.2221,"rag":"AMBER"},{"fy":2008,"csi":0.126,"rag":"AMBER"},{"fy":2009,"csi":0.0478,"rag":"GREEN"}],"guar_band":[{"fy":2000,"csi":1.0853,"rag":"RED"},{"fy":2001,"csi":0.0769,"rag":"GREEN"},{"fy":2002,"csi":0.0388,"rag":"GREEN"},{"fy":2003,"csi":0.0652,"rag":"GREEN"},{"fy":2004,"csi":0.1185,"rag":"AMBER"},{"fy":2005,"csi":0.205,"rag":"AMBER"},{"fy":2006,"csi":0.3293,"rag":"RED"},{"fy":2007,"csi":0.3254,"rag":"RED"},{"fy":2008,"csi":0.146,"rag":"AMBER"},{"fy":2009,"csi":0.4895,"rag":"RED"}],"delivery_method":[{"fy":2000,"csi":0.2727,"rag":"RED"},{"fy":2001,"csi":0.1208,"rag":"AMBER"},{"fy":2002,"csi":0.037,"rag":"GREEN"},{"fy":2003,"csi":0.0394,"rag":"GREEN"},{"fy":2004,"csi":0.1302,"rag":"AMBER"},{"fy":2005,"csi":0.2892,"rag":"RED"},{"fy":2006,"csi":1.3535,"rag":"RED"},{"fy":2007,"csi":1.4239,"rag":"RED"},{"fy":2008,"csi":1.2959,"rag":"RED"},{"fy":2009,"csi":1.2307,"rag":"RED"}],"is_revolver":[{"fy":2000,"csi":0.2411,"rag":"AMBER"},{"fy":2001,"csi":0.0882,"rag":"GREEN"},{"fy":2002,"csi":0.014,"rag":"GREEN"},{"fy":2003,"csi":0.0262,"rag":"GREEN"},{"fy":2004,"csi":0.0559,"rag":"GREEN"},{"fy":2005,"csi":0.1252,"rag":"AMBER"},{"fy":2006,"csi":0.2744,"rag":"RED"},{"fy":2007,"csi":0.2852,"rag":"RED"},{"fy":2008,"csi":0.1702,"rag":"AMBER"},{"fy":2009,"csi":0.0495,"rag":"GREEN"}],"same_state_bank":[{"fy":2000,"csi":0.0146,"rag":"GREEN"},{"fy":2001,"csi":0.0088,"rag":"GREEN"},{"fy":2002,"csi":0.0004,"rag":"GREEN"},{"fy":2003,"csi":0.0035,"rag":"GREEN"},{"fy":2004,"csi":0.0066,"rag":"GREEN"},{"fy":2005,"csi":0.0172,"rag":"GREEN"},{"fy":2006,"csi":0.0316,"rag":"GREEN"},{"fy":2007,"csi":0.026,"rag":"GREEN"},{"fy":2008,"csi":0.0001,"rag":"GREEN"},{"fy":2009,"csi":0.0822,"rag":"GREEN"}],"business_age":[{"fy":2000,"csi":0.0651,"rag":"GREEN"},{"fy":2001,"csi":0.035,"rag":"GREEN"},{"fy":2002,"csi":0.0361,"rag":"GREEN"},{"fy":2003,"csi":0.0216,"rag":"GREEN"},{"fy":2004,"csi":0.0531,"rag":"GREEN"},{"fy":2005,"csi":0.9325,"rag":"RED"},{"fy":2006,"csi":1.3795,"rag":"RED"},{"fy":2007,"csi":1.6674,"rag":"RED"},{"fy":2008,"csi":1.7883,"rag":"RED"},{"fy":2009,"csi":2.5088,"rag":"RED"}],"business_type":[{"fy":2000,"csi":0.001,"rag":"GREEN"},{"fy":2001,"csi":0.0006,"rag":"GREEN"},{"fy":2002,"csi":0.0005,"rag":"GREEN"},{"fy":2003,"csi":0.0011,"rag":"GREEN"},{"fy":2004,"csi":0.0013,"rag":"GREEN"},{"fy":2005,"csi":0.007,"rag":"GREEN"},{"fy":2006,"csi":0.0074,"rag":"GREEN"},{"fy":2007,"csi":0.0156,"rag":"GREEN"},{"fy":2008,"csi":0.0455,"rag":"GREEN"},{"fy":2009,"csi":0.0923,"rag":"GREEN"}],"industry":[{"fy":2000,"csi":0.9715,"rag":"RED"},{"fy":2001,"csi":0.2559,"rag":"RED"},{"fy":2002,"csi":0.4499,"rag":"RED"},{"fy":2003,"csi":0.4482,"rag":"RED"},{"fy":2004,"csi":0.4502,"rag":"RED"},{"fy":2005,"csi":0.4636,"rag":"RED"},{"fy":2006,"csi":0.488,"rag":"RED"},{"fy":2007,"csi":0.502,"rag":"RED"},{"fy":2008,"csi":0.4836,"rag":"RED"},{"fy":2009,"csi":0.4903,"rag":"RED"}],"region":[{"fy":2000,"csi":0.0011,"rag":"GREEN"},{"fy":2001,"csi":0.0027,"rag":"GREEN"},{"fy":2002,"csi":0.0028,"rag":"GREEN"},{"fy":2003,"csi":0.0008,"rag":"GREEN"},{"fy":2004,"csi":0.002,"rag":"GREEN"},{"fy":2005,"csi":0.0156,"rag":"GREEN"},{"fy":2006,"csi":0.0156,"rag":"GREEN"},{"fy":2007,"csi":0.0289,"rag":"GREEN"},{"fy":2008,"csi":0.0387,"rag":"GREEN"},{"fy":2009,"csi":0.0524,"rag":"GREEN"}],"jobs_band":[{"fy":2000,"csi":0.0927,"rag":"GREEN"},{"fy":2001,"csi":0.0384,"rag":"GREEN"},{"fy":2002,"csi":0.004,"rag":"GREEN"},{"fy":2003,"csi":0.0338,"rag":"GREEN"},{"fy":2004,"csi":0.0206,"rag":"GREEN"},{"fy":2005,"csi":0.0826,"rag":"GREEN"},{"fy":2006,"csi":0.4715,"rag":"RED"},{"fy":2007,"csi":0.6617,"rag":"RED"},{"fy":2008,"csi":0.6625,"rag":"RED"},{"fy":2009,"csi":0.6789,"rag":"RED"}]},"segments":{"industry":[{"industry":"Accommodation & Food Services","total_loans":70150,"default_rate_dev":0.1725,"default_rate_crisis":0.3517,"default_rate_overall":0.2524,"avg_score":542.0},{"industry":"Administrative & Support & Waste Management","total_loans":31107,"default_rate_dev":0.1458,"default_rate_crisis":0.3342,"default_rate_overall":0.2367,"avg_score":540.0},{"industry":"Agriculture, Forestry & Fishing","total_loans":4430,"default_rate_dev":0.1793,"default_rate_crisis":0.1959,"default_rate_overall":0.1734,"avg_score":534.0},{"industry":"Arts, Entertainment & Recreation","total_loans":12254,"default_rate_dev":0.1835,"default_rate_crisis":0.3425,"default_rate_overall":0.2586,"avg_score":536.0},{"industry":"Construction","total_loans":54543,"default_rate_dev":0.1562,"default_rate_crisis":0.3549,"default_rate_overall":0.2643,"avg_score":533.0},{"industry":"Educational Services","total_loans":6685,"default_rate_dev":0.1453,"default_rate_crisis":0.3188,"default_rate_overall":0.2332,"avg_score":544.0},{"industry":"Finance & Insurance","total_loans":9317,"default_rate_dev":0.1295,"default_rate_crisis":0.3941,"default_rate_overall":0.2722,"avg_score":545.0},{"industry":"Health Care & Social Assistance","total_loans":42294,"default_rate_dev":0.0919,"default_rate_crisis":0.2098,"default_rate_overall":0.1438,"avg_score":564.0},{"industry":"Information & Media","total_loans":10021,"default_rate_dev":0.179,"default_rate_crisis":0.338,"default_rate_overall":0.2628,"avg_score":531.0},{"industry":"Management of Companies","total_loans":157,"default_rate_dev":0.0533,"default_rate_crisis":0.3636,"default_rate_overall":0.1847,"avg_score":589.0},{"industry":"Manufacturing (Food, Textiles, Apparel)","total_loans":9456,"default_rate_dev":0.1692,"default_rate_crisis":0.3335,"default_rate_overall":0.2411,"avg_score":537.0},{"industry":"Manufacturing (Metal, Machinery, Electronics)","total_loans":26778,"default_rate_dev":0.1396,"default_rate_crisis":0.2684,"default_rate_overall":0.19,"avg_score":544.0},{"industry":"Manufacturing (Wood, Paper, Chemical, Plastics)","total_loans":13372,"default_rate_dev":0.1696,"default_rate_crisis":0.3158,"default_rate_overall":0.2278,"avg_score":537.0},{"industry":"Mining, Quarrying & Oil Extraction","total_loans":1118,"default_rate_dev":0.1119,"default_rate_crisis":0.1535,"default_rate_overall":0.1306,"avg_score":553.0},{"industry":"Other / Unclassified","total_loans":16885,"default_rate_dev":0.1603,"default_rate_crisis":NaN,"default_rate_overall":0.1603,"avg_score":543.0},{"industry":"Other Services (Repair, Personal, Laundry)","total_loans":61204,"default_rate_dev":0.1578,"default_rate_crisis":0.3344,"default_rate_overall":0.2384,"avg_score":541.0},{"industry":"Postal, Couriers & Warehousing","total_loans":2114,"default_rate_dev":0.1699,"default_rate_crisis":0.3208,"default_rate_overall":0.2427,"avg_score":533.0},{"industry":"Professional, Scientific & Technical Services","total_loans":57453,"default_rate_dev":0.1207,"default_rate_crisis":0.3012,"default_rate_overall":0.2106,"avg_score":547.0},{"industry":"Public Administration","total_loans":103,"default_rate_dev":0.2353,"default_rate_crisis":0.3016,"default_rate_overall":0.301,"avg_score":501.0},{"industry":"Real Estate, Rental & Leasing","total_loans":12603,"default_rate_dev":0.1622,"default_rate_crisis":0.4254,"default_rate_overall":0.3076,"avg_score":536.0},{"industry":"Retail Trade (General, Clothing, Sporting, Online)","total_loans":32775,"default_rate_dev":0.2131,"default_rate_crisis":0.3672,"default_rate_overall":0.2823,"avg_score":525.0},{"industry":"Retail Trade (Motor, Furniture, Electronics, Food)","total_loans":75594,"default_rate_dev":0.1748,"default_rate_crisis":0.367,"default_rate_overall":0.2621,"avg_score":535.0},{"industry":"Transportation & Warehousing","total_loans":19003,"default_rate_dev":0.1663,"default_rate_crisis":0.3655,"default_rate_overall":0.278,"avg_score":530.0},{"industry":"Utilities","total_loans":493,"default_rate_dev":0.1028,"default_rate_crisis":0.2857,"default_rate_overall":0.1765,"avg_score":555.0},{"industry":"Wholesale Trade","total_loans":34877,"default_rate_dev":0.1694,"default_rate_crisis":0.3799,"default_rate_overall":0.263,"avg_score":530.0}],"business_age":[{"business_age":"Established (5+ Years)","total_loans":133839,"default_rate_dev":0.2075,"default_rate_crisis":0.3555,"default_rate_overall":0.3097,"avg_score":525.0},{"business_age":"New (<1 Year)","total_loans":135785,"default_rate_dev":0.1743,"default_rate_crisis":0.3028,"default_rate_overall":0.2303,"avg_score":540.0},{"business_age":"Startup","total_loans":20910,"default_rate_dev":0.1332,"default_rate_crisis":0.3181,"default_rate_overall":0.2747,"avg_score":550.0},{"business_age":"Young (1-4 Years)","total_loans":314252,"default_rate_dev":0.1506,"default_rate_crisis":0.3379,"default_rate_overall":0.2093,"avg_score":545.0}],"loan_amt_band":[{"loan_amt_band":"$100k-$250k","total_loans":103575,"default_rate_dev":0.1463,"default_rate_crisis":0.2698,"default_rate_overall":0.1861,"avg_score":547.0},{"loan_amt_band":"$250k-$500k","total_loans":57318,"default_rate_dev":0.1341,"default_rate_crisis":0.3059,"default_rate_overall":0.1969,"avg_score":547.0},{"loan_amt_band":"$25k-$50k","total_loans":126646,"default_rate_dev":0.1787,"default_rate_crisis":0.3843,"default_rate_overall":0.2812,"avg_score":537.0},{"loan_amt_band":"$50k-$100k","total_loans":92060,"default_rate_dev":0.1451,"default_rate_crisis":0.336,"default_rate_overall":0.2229,"avg_score":534.0},{"loan_amt_band":"<$25k","total_loans":171028,"default_rate_dev":0.1799,"default_rate_crisis":0.3402,"default_rate_overall":0.2722,"avg_score":533.0},{"loan_amt_band":">$500k","total_loans":54159,"default_rate_dev":0.1441,"default_rate_crisis":0.3055,"default_rate_overall":0.203,"avg_score":554.0}],"region":[{"region":"Midwest","total_loans":127222,"default_rate_dev":0.1699,"default_rate_crisis":0.2831,"default_rate_overall":0.2235,"avg_score":536.0},{"region":"Northeast","total_loans":136384,"default_rate_dev":0.1304,"default_rate_crisis":0.3012,"default_rate_overall":0.2033,"avg_score":545.0},{"region":"Other","total_loans":7317,"default_rate_dev":0.1165,"default_rate_crisis":0.2454,"default_rate_overall":0.1678,"avg_score":550.0},{"region":"South","total_loans":165132,"default_rate_dev":0.1966,"default_rate_crisis":0.3644,"default_rate_overall":0.2727,"avg_score":529.0},{"region":"West","total_loans":168731,"default_rate_dev":0.1381,"default_rate_crisis":0.3765,"default_rate_overall":0.2478,"avg_score":548.0}],"is_revolver":[{"is_revolver":"Revolving Line","total_loans":177377,"default_rate_dev":0.2012,"default_rate_crisis":0.3311,"default_rate_overall":0.269,"avg_score":530.0},{"is_revolver":"Term Loan","total_loans":427409,"default_rate_dev":0.1478,"default_rate_crisis":0.3392,"default_rate_overall":0.2259,"avg_score":544.0}]}},"uk_insolvency":[{"year":2000,"total_insolvencies":15704,"creditors_voluntary_liquidations":8773,"compulsory_liquidations":4925,"administrations":414},{"year":2001,"total_insolvencies":16403,"creditors_voluntary_liquidations":9250,"compulsory_liquidations":4675,"administrations":701},{"year":2002,"total_insolvencies":18142,"creditors_voluntary_liquidations":9627,"compulsory_liquidations":6231,"administrations":627},{"year":2003,"total_insolvencies":16430,"creditors_voluntary_liquidations":8833,"compulsory_liquidations":5234,"administrations":742},{"year":2004,"total_insolvencies":15104,"creditors_voluntary_liquidations":7799,"compulsory_liquidations":4584,"administrations":1591},{"year":2005,"total_insolvencies":16217,"creditors_voluntary_liquidations":7837,"compulsory_liquidations":5233,"administrations":2286},{"year":2006,"total_insolvencies":17549,"creditors_voluntary_liquidations":7977,"compulsory_liquidations":5418,"administrations":3467},{"year":2007,"total_insolvencies":15629,"creditors_voluntary_liquidations":7433,"compulsory_liquidations":5165,"administrations":2495},{"year":2008,"total_insolvencies":21170,"creditors_voluntary_liquidations":10090,"compulsory_liquidations":5494,"administrations":4800},{"year":2009,"total_insolvencies":24038,"creditors_voluntary_liquidations":13493,"compulsory_liquidations":5643,"administrations":4077},{"year":2010,"total_insolvencies":19538,"creditors_voluntary_liquidations":11346,"compulsory_liquidations":4727,"administrations":2652},{"year":2011,"total_insolvencies":20264,"creditors_voluntary_liquidations":12018,"compulsory_liquidations":4882,"administrations":2559},{"year":2012,"total_insolvencies":19415,"creditors_voluntary_liquidations":11996,"compulsory_liquidations":4194,"administrations":2361},{"year":2013,"total_insolvencies":17669,"creditors_voluntary_liquidations":11488,"compulsory_liquidations":3589,"administrations":2005},{"year":2014,"total_insolvencies":16253,"creditors_voluntary_liquidations":10355,"compulsory_liquidations":3716,"administrations":1601},{"year":2015,"total_insolvencies":14551,"creditors_voluntary_liquidations":9902,"compulsory_liquidations":2853,"administrations":1412},{"year":2016,"total_insolvencies":14669,"creditors_voluntary_liquidations":10087,"compulsory_liquidations":2886,"administrations":1346},{"year":2017,"total_insolvencies":14570,"creditors_voluntary_liquidations":10196,"compulsory_liquidations":2748,"administrations":1316},{"year":2018,"total_insolvencies":16051,"creditors_voluntary_liquidations":11140,"compulsory_liquidations":3088,"administrations":1464},{"year":2019,"total_insolvencies":17170,"creditors_voluntary_liquidations":12056,"compulsory_liquidations":2942,"administrations":1816},{"year":2020,"total_insolvencies":12630,"creditors_voluntary_liquidations":9487,"compulsory_liquidations":1353,"administrations":1527},{"year":2021,"total_insolvencies":14057,"creditors_voluntary_liquidations":12654,"compulsory_liquidations":491,"administrations":796},{"year":2022,"total_insolvencies":22133,"creditors_voluntary_liquidations":18821,"compulsory_liquidations":1969,"administrations":1231},{"year":2023,"total_insolvencies":25165,"creditors_voluntary_liquidations":20570,"compulsory_liquidations":2840,"administrations":1567},{"year":2024,"total_insolvencies":23881,"creditors_voluntary_liquidations":18838,"compulsory_liquidations":3241,"administrations":1597}]};
 
-function showTab(tabId) {
+// Robust Tab Switching
+function switchTab(tabId, clickedBtn) {
   document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-  document.getElementById('pane-' + tabId).classList.add('active');
-  event.target.classList.add('active');
+  
+  const pane = document.getElementById('pane-' + tabId);
+  if (pane) pane.classList.add('active');
+  
+  if (clickedBtn) {
+    clickedBtn.classList.add('active');
+  } else {
+    const btn = document.getElementById('tabBtn-' + tabId);
+    if (btn) btn.classList.add('active');
+  }
 }
 
 // Risk Checker Calculation
@@ -823,7 +959,8 @@ function scoreLoan() {
   const breakdown = [];
 
   fields.forEach(f => {
-    const val = document.getElementById(f).value;
+    const el = document.getElementById(f);
+    const val = el ? el.value : '';
     const pt = pts[f] && pts[f][val] !== undefined ? pts[f][val] : 0;
     totalScore += pt;
     breakdown.push({
@@ -920,6 +1057,87 @@ function scoreLoan() {
       `;
       explainBody.appendChild(tr);
     });
+  }
+}
+
+// Draw Visual SVG Charts
+function drawCharts() {
+  // 1. Decile Calibration Chart (SVG)
+  const decSvg = document.getElementById('decileSvg');
+  if (decSvg && DATA.model.deciles) {
+    const decs = DATA.model.deciles;
+    let svgHtml = `
+      <line x1="60" y1="20" x2="60" y2="190" stroke="#cbd5e1" stroke-width="1.5" />
+      <line x1="60" y1="190" x2="780" y2="190" stroke="#cbd5e1" stroke-width="1.5" />
+      <text x="60" y="15" fill="#64748b" font-size="11" font-weight="600">Default Rate (%)</text>
+    `;
+    const w = 68;
+    decs.forEach((d, i) => {
+      const x = 75 + i * w;
+      const rate = d.actual_default_rate * 100;
+      const h = Math.min(160, (rate / 65) * 160);
+      const y = 190 - h;
+      const color = rate < 10 ? '#15803d' : (rate < 25 ? '#b45309' : '#b91c1c');
+      
+      svgHtml += `
+        <rect x="${x}" y="${y}" width="48" height="${h}" fill="${color}" rx="4" />
+        <text x="${x + 24}" y="${y - 6}" text-anchor="middle" font-size="10" font-weight="700" fill="${color}">${rate.toFixed(1)}%</text>
+        <text x="${x + 24}" y="205" text-anchor="middle" font-size="10" fill="#64748b">D${d.decile}</text>
+      `;
+    });
+    decSvg.innerHTML = svgHtml;
+  }
+
+  // 2. PSI Yearly Chart (SVG)
+  const psiSvg = document.getElementById('psiChartSvg');
+  if (psiSvg && DATA.monitoring.psi_by_year) {
+    const rows = DATA.monitoring.psi_by_year;
+    let svgHtml = `
+      <line x1="50" y1="20" x2="50" y2="160" stroke="#cbd5e1" stroke-width="1.5" />
+      <line x1="50" y1="160" x2="780" y2="160" stroke="#cbd5e1" stroke-width="1.5" />
+      <!-- Threshold lines -->
+      <line x1="50" y1="100" x2="780" y2="100" stroke="#b45309" stroke-dasharray="4,4" stroke-width="1" />
+      <text x="785" y="103" font-size="10" fill="#b45309">0.10 Amber</text>
+    `;
+    const w = 68;
+    rows.forEach((r, i) => {
+      const x = 70 + i * w;
+      const h = Math.min(130, (r.psi / 0.25) * 130);
+      const y = 160 - h;
+      const color = r.rag === 'GREEN' ? '#15803d' : (r.rag === 'AMBER' ? '#b45309' : '#b91c1c');
+
+      svgHtml += `
+        <rect x="${x}" y="${y}" width="44" height="${h}" fill="${color}" rx="4" />
+        <text x="${x + 22}" y="${y - 6}" text-anchor="middle" font-size="10" font-weight="700" fill="${color}">${r.psi.toFixed(3)}</text>
+        <text x="${x + 22}" y="176" text-anchor="middle" font-size="10" fill="#64748b">'0${r.fy % 100}</text>
+      `;
+    });
+    psiSvg.innerHTML = svgHtml;
+  }
+
+  // 3. UK Insolvencies Chart (SVG)
+  const ukSvg = document.getElementById('ukChartSvg');
+  if (ukSvg && DATA.uk_insolvency) {
+    const uk = DATA.uk_insolvency;
+    let svgHtml = `
+      <line x1="60" y1="20" x2="60" y2="160" stroke="#cbd5e1" stroke-width="1.5" />
+      <line x1="60" y1="160" x2="780" y2="160" stroke="#cbd5e1" stroke-width="1.5" />
+    `;
+    const maxVal = 26000;
+    const w = 27;
+    uk.forEach((row, i) => {
+      const x = 75 + i * w;
+      const h = Math.min(135, (row.total_insolvencies / maxVal) * 135);
+      const y = 160 - h;
+      const isPeak = row.year === 2009 || row.year >= 2022;
+      const color = isPeak ? '#b91c1c' : '#1976d2';
+
+      svgHtml += `
+        <rect x="${x}" y="${y}" width="18" height="${h}" fill="${color}" rx="2" />
+        <text x="${x + 9}" y="176" text-anchor="middle" font-size="8" fill="#64748b">'${String(row.year).slice(2)}</text>
+      `;
+    });
+    ukSvg.innerHTML = svgHtml;
   }
 }
 
@@ -1069,6 +1287,9 @@ function initDashboard() {
       ukBody.appendChild(tr);
     });
   }
+
+  // Draw SVG Charts
+  drawCharts();
 
   // Run initial scoring calculation
   scoreLoan();
